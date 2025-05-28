@@ -28,20 +28,33 @@ export default function RootLayout({
                   <img src="/images/cfafs-logo.png" alt="CFAFS Logo" height="36" />
                 </Link>
               </div>
-              
               <NavToggle />
-              
               <div id="primary-menu" className="nav-menu">
-                <ul>
-                  <li><Link href="/about">About</Link></li>
-                  <li><Link href="/loans">Loans</Link></li>
-                  <li><Link href="/membership">Membership</Link></li>
-                  <li><Link href="/contact">Contact</Link></li>
-                  <li><Link href="/board-members">Board Members</Link></li>
-                  <li><Link href="/executive-leadership-team">Executive Leadership Team</Link></li>
-                  <li><Link href="/account-login" className="login-btn">Account Login</Link></li>
+                <ul style={{ justifyContent: 'flex-end', width: '100%' }}>
+                  {/* About CFA Dropdown */}
+                  <li className="dropdown">
+                    <span tabIndex={0} className="dropdown-toggle">About CFA</span>
+                    <ul className="dropdown-menu">
+                      <li><Link href="/about#market-mission">Market & Mission</Link></li>
+                      <li><Link href="/about#members">Members</Link></li>
+                      <li><Link href="/about#soc-ii">SOC II & Certifications</Link></li>
+                      <li><Link href="/board-members">Board of Directors</Link></li>
+                      <li><Link href="/executive-leadership-team">CFA Executive Team</Link></li>
+                    </ul>
+                  </li>
+                  {/* Products Dropdown */}
+                  <li className="dropdown">
+                    <span tabIndex={0} className="dropdown-toggle">Products</span>
+                    <ul className="dropdown-menu">
+                      <li><Link href="/loans#loan-products">Loan Products</Link></li>
+                      <li><Link href="/loans#field-finance">Field Finance</Link></li>
+                    </ul>
+                  </li>
                   <li><Link href="/careers">Careers</Link></li>
-                  <li><Link href="/news">News</Link></li>
+                  <li><Link href="/about#developers">Partners</Link></li>
+                  <li><Link href="/contact">Contact Us</Link></li>
+                  <li><Link href="/news">Press</Link></li>
+                  <li><Link href="/account-login" className="login-btn">Account Login</Link></li>
                 </ul>
               </div>
             </div>

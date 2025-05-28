@@ -459,3 +459,73 @@ footer.site-footer strong {
   background: var(--color-neutral-light);
   color: var(--color-primary);
 }
+
+/* Dropdown menu styles */
+.nav-menu .dropdown {
+  position: relative;
+}
+.nav-menu .dropdown-toggle {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  color: var(--color-neutral-light);
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  display: block;
+}
+.nav-menu .dropdown-toggle:hover,
+.nav-menu .dropdown-toggle:focus {
+  background: var(--color-secondary);
+  color: var(--color-neutral-dark);
+}
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 210px;
+  background: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(44, 41, 68, 0.09);
+  border-radius: 8px;
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+.nav-menu .dropdown:hover .dropdown-menu,
+.nav-menu .dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+.nav-menu .dropdown-menu li {
+  width: 100%;
+}
+.nav-menu .dropdown-menu a {
+  padding: 0.5rem 1.2rem;
+  color: var(--color-neutral-light);
+  border-radius: 0;
+  font-weight: 500;
+  background: none;
+}
+.nav-menu .dropdown-menu a:hover,
+.nav-menu .dropdown-menu a:focus {
+  background: var(--color-secondary);
+  color: var(--color-neutral-dark);
+}
+
+/* Right-align nav menu */
+.nav-menu ul {
+  justify-content: flex-end !important;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav-menu .dropdown-menu {
+    position: static;
+    min-width: 0;
+    box-shadow: none;
+    background: var(--color-primary);
+    border-radius: 0;
+    padding: 0;
+  }
+  .nav-menu .dropdown-menu a {
+    padding-left: 2rem;
+  }
+}
