@@ -3,6 +3,7 @@ import Link from "next/link";
 import ChatbotLauncher from "../components/ChatbotLauncher";
 import Footer from "../components/Footer";
 import NavToggle from "../components/NavToggle";
+import DropdownMenu from "../components/DropdownMenu";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,36 +21,29 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
       </head>
       <body className="antialiased">
-        <header className="site-header">
+        <header className="site-header textured-nav">
           <nav className="primary-nav" role="navigation" aria-label="Main Navigation">
             <div className="nav-container">
               <div className="nav-logo">
-                <Link href="/" aria-label="CFAFS Home">
-                  <img src="/images/cfafs-logo.png" alt="CFAFS Logo" height="36" />
+                <Link href="/about" aria-label="About CFA">
+                  <div className="nav-logo-bg">
+                    <img src="/images/CFA-01.png" alt="CFA Logo" height="36" />
+                  </div>
                 </Link>
               </div>
               <NavToggle />
               <div id="primary-menu" className="nav-menu">
                 <ul style={{ justifyContent: 'flex-end', width: '100%' }}>
-                  {/* About CFA Dropdown */}
-                  <li className="dropdown">
-                    <span tabIndex={0} className="dropdown-toggle">About CFA</span>
-                    <ul className="dropdown-menu">
-                      <li><Link href="/about#market-mission">Market & Mission</Link></li>
-                      <li><Link href="/about#members">Members</Link></li>
-                      <li><Link href="/about#soc-ii">SOC II & Certifications</Link></li>
-                      <li><Link href="/board-members">Board of Directors</Link></li>
-                      <li><Link href="/executive-leadership-team">CFA Executive Team</Link></li>
-                    </ul>
-                  </li>
-                  {/* Products Dropdown */}
-                  <li className="dropdown">
-                    <span tabIndex={0} className="dropdown-toggle">Products</span>
-                    <ul className="dropdown-menu">
-                      <li><Link href="/loans#loan-products">Loan Products</Link></li>
-                      <li><Link href="/loans#field-finance">Field Finance</Link></li>
-                    </ul>
-                  </li>
+                  <DropdownMenu label="About CFA" href="/about">
+                    <li><Link href="/membership">Members</Link></li>
+                    <li><Link href="/soc-ii">SOC II & Certifications</Link></li>
+                    <li><Link href="/board-members">Board of Directors</Link></li>
+                    <li><Link href="/executive-leadership-team">CFA Executive Team</Link></li>
+                  </DropdownMenu>
+                  <DropdownMenu label="Products" href="/loans">
+                    <li><Link href="/loans">Loan Products</Link></li>
+                    <li><Link href="/field-finance">Field Finance</Link></li>
+                  </DropdownMenu>
                   <li><Link href="/careers">Careers</Link></li>
                   <li><Link href="/about#developers">Partners</Link></li>
                   <li><Link href="/contact">Contact Us</Link></li>

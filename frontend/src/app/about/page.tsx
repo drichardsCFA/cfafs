@@ -9,20 +9,12 @@ export default function AboutPage() {
     <main className="bg-[#F7F7F2] min-h-screen">
       <section className="relative flex flex-col md:flex-row items-center justify-between max-w-5xl mx-auto pt-8 pb-10 px-4 md:px-8">
         <div className="flex-1 md:text-left text-center py-4">
-          <img
-            src="/images/cfafs-logo.png"
-            alt="CFAFS Logo"
-            className="mx-auto md:mx-0 mb-4"
-            style={{
-              maxWidth: 110,
-              display: 'block'
-            }}
-          />
+
           <h1 className="text-4xl md:text-5xl font-extrabold" style={{ color: "#4F7942", fontFamily: "Montserrat,Arial,sans-serif" }}>
-            Empowering Agriculture. Growing Communities.
+            CFA: Financial Services for Successful Agriculture
           </h1>
           <p className="mt-6 text-lg md:text-xl max-w-xl mx-auto md:mx-0" style={{ fontFamily: "Lato, Arial, sans-serif", color: "#495464" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla facilisi. Pellentesque non dictum ex. Nunc commodo, nunc sed pretium laoreet, ex dolor luctus nunc, eu dictum lectus ex id odio.
+            The Cooperative Finance Association (CFA) partners with agricultural cooperatives and agribusinesses to deliver customized input financing solutions. With decades of industry experience, CFA streamlines credit access for growers, helping them secure essential inputs when they need them most. Our innovative financial tools and commitment to service support stronger rural economies and more resilient farming operations. Discover how CFA is advancing agriculture through trusted financial partnerships.
           </p>
           <a href="/membership"
              className="inline-block mt-8 px-7 py-3 font-bold rounded-lg shadow transition bg-[#FFC857] text-[#4F7942] hover:bg-[#5CA4EA] hover:text-[#495464] focus:outline-2 focus:outline-[#4F7942]">
@@ -46,15 +38,16 @@ export default function AboutPage() {
             Mission
           </h2>
           <p className="text-base font-normal text-[#495464] leading-relaxed" style={{fontFamily:"Lato,Arial,sans-serif"}}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique velit non enim dictum, at tristique mi volutpat. Duis gravida magna vitae ex porta, at convallis velit faucibus.
+          The mission of CFA is to strengthen agriculture by providing reliable, flexible financing solutions to cooperatives and their farmer-members. We are committed to supporting rural communities through strategic partnerships, expert financial services, and innovative programs that empower growers and agribusinesses to thrive in a changing agricultural landscape.
           </p>
         </div>
         <div className="bg-white rounded-2xl p-7 shadow-sm border hover:shadow-md transition-all min-h-[185px]">
           <h2 className="text-xl font-bold mb-3" style={{ color: "#5CA4EA", fontFamily: "Montserrat,Arial,sans-serif" }}>
-            Vision
+            History
           </h2>
           <p className="text-base font-normal text-[#495464] leading-relaxed" style={{fontFamily:"Lato,Arial,sans-serif"}}>
-            Pellentesque dapibus, urna eu lacinia suscipit, mauris leo gravida felis, nec elementum sapien lacus eu sollicitudin. Integer ut dictum ex. 
+          Founded in 1943, CFA has a rich history of supporting American agriculture. What began as a cooperative effort to improve credit access for farmers has grown into a trusted financial partner for agribusinesses nationwide, with over 80 years of experience in delivering dependable input financing solutions.
+
           </p>
         </div>
       </section>
@@ -69,23 +62,23 @@ export default function AboutPage() {
           <ul className="flex flex-col md:flex-row md:justify-between gap-8 md:gap-0">
             <li className="flex flex-col items-center md:w-1/4">
               <span className="rounded-full border-4 border-[#FFC857] w-9 h-9 bg-[#F7F7F2] mb-2"></span>
-              <span className="text-[#495464] text-sm font-semibold">2015</span>
+              <span className="text-[#495464] text-sm font-semibold">1943</span>
               <span className="text-xs italic text-[#7c818b]">Founded</span>
             </li>
             <li className="flex flex-col items-center md:w-1/4">
               <span className="rounded-full border-4 border-[#5CA4EA] w-9 h-9 bg-[#F7F7F2] mb-2"></span>
-              <span className="text-[#495464] text-sm font-semibold">2020</span>
-              <span className="text-xs italic text-[#7c818b]">1000th Member</span>
+              <span className="text-[#495464] text-sm font-semibold">1980s</span>
+              <span className="text-xs italic text-[#7c818b]">Exapansion of Input Finance Programs</span>
             </li>
             <li className="flex flex-col items-center md:w-1/4">
               <span className="rounded-full border-4 border-[#4F7942] w-9 h-9 bg-[#F7F7F2] mb-2"></span>
-              <span className="text-[#495464] text-sm font-semibold">2023</span>
-              <span className="text-xs italic text-[#7c818b]">Launched AI FAQ</span>
+              <span className="text-[#495464] text-sm font-semibold">2022</span>
+              <span className="text-xs italic text-[#7c818b]">Field Finance goes live</span>
             </li>
             <li className="flex flex-col items-center md:w-1/4">
               <span className="rounded-full border-4 border-[#FFC857] w-9 h-9 bg-[#F7F7F2] mb-2"></span>
               <span className="text-[#495464] text-sm font-semibold">2025</span>
-              <span className="text-xs italic text-[#7c818b]">Next Milestone</span>
+              <span className="text-xs italic text-[#7c818b]">$4 billion in commitments</span>
             </li>
           </ul>
         </div>
