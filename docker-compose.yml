@@ -2,30 +2,62 @@ services:
   frontend:
     build:
       context: ./frontend
-    working_dir: /app
+      dockerfile: Dockerfile
+    container_name: cfafs-frontend
     ports:
       - "3000:3000"
     environment:
+      - NODE_ENV=production
       - NEXT_PUBLIC_API_URL=http://backend:8000
+      - HOSTNAME=0.0.0.0
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   backend:
     build:
       context: ./backend
-    working_dir: /app
+      dockerfile: Dockerfile
+    container_name: cfafs-backend
     ports:
       - "8000:8000"
     environment:
+      - ENVIRONMENT=production
       - WEAVIATE_URL=http://faq:8080
+      - FRONTEND_ORIGIN=http://frontend:3000
+    depends_on:
+      faq:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   chatbot:
     image: botpress/server:latest
     container_name: cfafs-chatbot
     environment:
       - BP_PRODUCTION=true
+      - NODE_ENV=production
     ports:
       - "3001:3000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
     networks:
       - default
 
@@ -41,19 +73,47 @@ services:
       - DEFAULT_VECTORIZER_MODULE=text2vec-transformers
       - TRANSFORMERS_INFERENCE_API=http://transformers:8080
       - ENABLE_MODULES=text2vec-transformers
+      - CLUSTER_HOSTNAME=node1
     volumes:
-      - ./faq/data:/data
+      - weaviate_data:/data
+      - ./faq/data:/import
+    depends_on:
+      transformers:
+        condition: service_started
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/v1/.well-known/ready || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
     networks:
       - default
 
   transformers:
     image: semitechnologies/transformers-inference:sentence-transformers-paraphrase-multilingual-MiniLM-L12-v2
+    container_name: cfafs-transformers
     environment:
       - ENABLE_CUDA=false
+      - MODEL_CACHE_SIZE=1000
     ports:
       - "8082:8080"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/.well-known/live || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 120s
     networks:
       - default
+# Named volumes for data persistence
+volumes:
+  weaviate_data:
+    driver: local
+
+# Custom network
 networks:
   default:
     name: cfafsnet
+    driver: bridge

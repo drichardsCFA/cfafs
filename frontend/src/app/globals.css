@@ -197,6 +197,15 @@ nav, .primary-nav, input, label, button, select, textarea, .faq-form {
 .faq-btn {
   padding: 0.53rem 1.25rem;
   background: var(--color-accent);             /* Goldenrod */
+  color: var(--color-primary);
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.04rem;
+  margin-top: 0.3rem;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s;
+}
 
 /* Call-to-action/homepage button styles */
 .cta-btn {
@@ -219,14 +228,6 @@ nav, .primary-nav, input, label, button, select, textarea, .faq-form {
   background: var(--color-secondary);
   color: var(--color-primary);
   outline: none;
-}
-  border-radius: 6px;
-  border: none;
-  font-weight: 700;
-  font-size: 1.04rem;
-  margin-top: 0.3rem;
-  cursor: pointer;
-  transition: background 0.16s, color 0.16s;
 }
 .faq-btn:hover,
 .faq-btn:focus {
@@ -266,34 +267,15 @@ footer.site-footer strong {
   color: var(--color-accent);                /* Goldenrod */
 }
 
-/* About page hero, timeline, and CTA polish */
-.cta-btn {
-  background: var(--color-accent);
-  color: var(--color-primary);
-  font-family: 'Lato', Arial, sans-serif;
-  padding: 0.82em 2.2em;
-  font-size: 1.11rem;
-  border-radius: 6px;
-  border: none;
-  text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 2px 9px rgba(78, 121, 66, 0.045);
-  transition: background 0.19s, color 0.19s;
-  display: inline-block;
-  cursor: pointer;
-}
-.cta-btn:hover,
-.cta-btn:focus {
-  background: var(--color-secondary);
-  color: var(--color-primary);
-  outline: none;
-}
+/* About page hero, timeline, and CTA polish - styles moved up */
 /* About page images */
 .about-hero-img {
   width: 100%;
   max-height: 315px;
   object-fit: cover;
   border-radius: 10px;
+  background: #e2e5eb;
+}
 
 /* Interest Rates Blurb styling */
 .interest-rates-blurb dt {
@@ -307,8 +289,6 @@ footer.site-footer strong {
 }
 .interest-rates-blurb {
   line-height: 1.65;
-}
-  background: #e2e5eb;
 }
 .about-logo-img {
   display: block;
