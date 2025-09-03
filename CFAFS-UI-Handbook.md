@@ -191,17 +191,3 @@ POST /api/auth/login
 - Responsive design: Mobile-first, breakpoints for grid stacking
 - A11y: Ensure WCAG compliance, keyboard nav, and color contrast
 
----
-
-## 📦 Optional Deliverables
-
-Ask if you'd like us to:
-
-- Generate Figma-ready component library
-- Build complete Tailwind component set
-- Add dark mode toggle
-- Integrate with CMS (Strapi, Sanity, etc.) for Press and Team
-
----
-
-Ready to go! This doc can now be handed directly to your design and frontend teams to begin building your production-quality site.
