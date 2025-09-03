@@ -29,6 +29,11 @@ This directory contains files that were part of the development process but are 
 - **Content**: Draft documentation files
 - **Status**: Consolidated into current documentation structure (WARP.md, README.md, etc.)
 
+### `Bios and Headshots/` Directory
+- **Purpose**: Development assets for team member profiles
+- **Content**: Board member photos, executive team bios, development notes
+- **Status**: Development assets - will be integrated into production site when content pages are built
+
 ## Restoration
 
 If any of these files are needed in the future, they can be moved back to the root directory. These files have been preserved for historical reference and potential future use.
