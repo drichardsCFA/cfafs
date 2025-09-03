@@ -1,6 +1,6 @@
 # CFAFS Website
 
-> **Central Finance and Assistance Society** - Modern web platform serving the agricultural finance industry since 1943
+> **CFAFS.com** - Modern web platform 
 
 ## 🏗️ Project Status: Production Ready
 
@@ -37,7 +37,7 @@ Secure member portal requiring login:
 - **📋 Credit Policies & Collections** - Member financial policies
 - **📖 How To (Git)** - Technical documentation and guides
 - **🔐 CONDOR (IDP)** - Identity provider integration
-- **ℹ️ Private Member Information** - Confidential member resources
+- **ℹ️ Private Member Information** - Confidential member resources including voting, credit policies, disclosures
 - **💰 Textraction** - Financial document processing tools
 
 ## 🚀 Technical Architecture
@@ -278,7 +278,7 @@ Serving agricultural finance since 1943
 
 ---
 
-*Last Updated: January 2025*  
+*Last Updated: 9.3 2025*  
 *Status: Production Ready - Public/Private Architecture*
 
 
