@@ -34,7 +34,7 @@ export default function AccountLoginPage() {
           </button>
           <div className="flex justify-between mt-6 text-xs">
             <a href="#" className="hover:text-[#5CA4EA] underline">Forgot password?</a>
-            <a href="/membership" className="hover:text-[#4F7942] underline">Not a member?</a>
+            <a href="/register" className="hover:text-[#4F7942] underline">New to CFAFS? Register</a>
           </div>
         </form>
       </section>

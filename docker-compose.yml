@@ -16,6 +16,8 @@ services:
     working_dir: /app
     ports:
       - "8000:8000"
+    environment:
+      - WEAVIATE_URL=http://faq:8080
 
   chatbot:
     image: botpress/server:latest

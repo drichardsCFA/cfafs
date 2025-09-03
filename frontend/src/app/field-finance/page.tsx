@@ -11,7 +11,7 @@ export default function FieldFinancePage() {
           Field Finance
         </h1>
         <p className="mt-6 mb-8 text-xl text-[#495464]" style={{ fontFamily: "Lato, Arial, sans-serif" }}>
-          Placeholder: This page will feature CFAFS's award-winning Field Finance loan origination software platform.
+          Placeholder: This page will feature CFAFS&apos;s award-winning Field Finance loan origination software platform.
         </p>
         <div className="rounded-2xl bg-white border shadow-sm p-7 flex flex-col items-center hover:shadow-md transition-all min-h-[210px]">
           <h2 className="font-bold text-xl mb-2" style={{ color: "#5CA4EA", fontFamily: "Montserrat,Arial,sans-serif" }}>

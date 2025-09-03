@@ -13,23 +13,12 @@ export default function FAQPage() {
     setLoading(true);
     setError(null);
 
-    const graphqlQuery = {
-      query: `{
-        Get {
-          FAQ(nearText: {concepts: ["${question}"]}, limit: 1) {
-            question
-            answer
-            topic
-          }
-        }
-      }`
-    };
-
     try {
-      const res = await fetch("http://localhost:8080/v1/graphql", {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL || "";
+      const res = await fetch(`${apiBase}/faq/search`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(graphqlQuery),
+        body: JSON.stringify({ question }),
       });
 
       if (!res.ok) {
@@ -37,7 +26,7 @@ export default function FAQPage() {
       }
 
       const data = await res.json();
-      const hits = data?.data?.Get?.FAQ || [];
+      const hits = data?.hits || [];
       if (hits.length === 0) {
         setAnswer(null);
         setError("No matching answer found.");
