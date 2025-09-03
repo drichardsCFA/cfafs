@@ -1,8 +1,8 @@
-# CFAFS Website - Project Overview & Development Plan
+# CFAFS Website
 
 ## 🏗️ Project Status: **Foundation Complete - Content & Features In Progress**
 
-The CFAFS (Central Finance and Assistance Society) website is a modern, full-stack web application built with Next.js, FastAPI, and AI-powered services. The project has a solid technical foundation and is ready for content completion and feature enhancement.
+CFAFS.com is a modern, full-stack web application built with Next.js, FastAPI, and AI-powered services. The project has a solid technical foundation and is ready for content completion and feature enhancement.
 
 ---
 
@@ -12,6 +12,7 @@ The CFAFS (Central Finance and Assistance Society) website is a modern, full-sta
 
 #### **Infrastructure & Architecture**
 - **Docker Compose Setup**: 4-service architecture (frontend, backend, chatbot, FAQ AI)
+- - Docker will likely be replaced with Kubernetes once this is migrated off my local to the CFA Azure
 - **Container Orchestration**: All services properly networked and configured
 - **Environment Management**: Development and production-ready containerization
 
