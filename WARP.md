@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-The CFAFS (Central Finance and Assistance Society) website is a modern, full-stack web application with a microservices architecture consisting of:
+The CFAF (Cooperative Finance Association) website is a modern, full-stack web application with a microservices architecture consisting of:
 
 - **Frontend**: Next.js 15 with TypeScript, React 19, and Tailwind CSS v4
 - **Backend**: FastAPI with Python for REST APIs
