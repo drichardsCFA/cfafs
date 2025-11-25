@@ -1,31 +1,53 @@
-# CFAFS Website
+# CFAFS Website - Modern Redesign
 
-> **CFAFS.com** - Modern web platform 
+> **CFAFS.com** - Premium financial services platform for agricultural cooperatives
 
-## 🏗️ Project Status: Production Ready
+## 🎨 Recent Major Redesign (November 2025)
 
-A modern, full-stack web application built with Next.js, FastAPI, and AI-powered services. The site features both public content and secure member portal functionality.
+The site has undergone a complete visual and UX transformation to match industry leaders like Wealthsimple and Stripe. Key changes:
 
-## 🌐 Site Structure
+- **Premium Design System**: Space Grotesk headings + Inter body text, refined color palette, modern shadows
+- **Single-Page Architecture**: Homepage now contains all key sections (Membership, Executive Team, Board, Contact) with smooth anchor navigation
+- **Card-Based Layouts**: Modern cards with subtle borders, shadows, and hover effects throughout
+- **Simplified Navigation**: Dropdown menus link to page sections instead of separate pages
+- **Image Placeholders**: SVG placeholders instead of emoji icons for professional appearance
+- **Responsive Design**: Mobile-first with backdrop blur navigation and smooth transitions
 
-The CFAFS website follows a clean, two-tier architecture:
+## 🏗️ Project Status: Active Development
 
-### **Public Section** (`https://cfafs.com`)
-Accessible to all visitors without authentication:
+## 🌐 Site Architecture
 
-- **🏠 About Us (Home)** - Company overview, mission, and agricultural finance expertise
-- **💼 Products** - Financial products and services overview
-- **🌾 Loan Products** - Detailed loan offerings for agricultural sector
-- **🏢 Field Finance** - Specialized financing solutions
-- **👥 Membership** - Benefits and application process
-- **🎯 Careers** - Job opportunities and company culture
-- **🤝 Partners** - Business partnerships and developer resources
-- **📰 Press** - News releases and company announcements
-- **📞 Contact Us** - Office locations, contact information
-- **🏛️ Board of Directors** - Leadership and governance
-- **👔 CFA Executive Team** - Executive leadership profiles
-- **🔒 SOC II & Certifications** - Compliance and security information
-- **🔐 Account Login** - Gateway to private member area
+### **Single-Page Navigation**
+The site now uses a modern single-page architecture with smooth anchor scrolling:
+
+#### **Homepage (`/`)**
+All key sections on one scrollable page:
+- Hero section with main value proposition
+- `#products` - Financial solutions overview with image placeholders
+- Trust indicators section
+- `#membership` - Member benefits and application CTA
+- `#executive-team` - Leadership profiles with circular photo placeholders
+- `#board` - Board of Directors grid
+- `#contact` - Contact CTAs and information
+
+#### **Products Page (`/products`)**
+Single page with sections:
+- `#loans` - Loan products with feature cards
+- `#field-finance` - Field finance platform overview
+- `#demo` - Request demo section
+- `#support` - Support resources
+
+#### **News Page (`/news`)**
+Single page with sections:
+- `#press` - Press releases and articles
+- `#partners` - Partner information
+- `#certifications` - SOC 2 and compliance
+
+#### **Standalone Pages**
+- `/about` - Company history and mission (transformed to modern layout)
+- `/careers` - Open positions
+- `/contact` - Contact form and office info
+- `/account-login` - Member portal gateway
 
 ### **Private Section** (Authenticated Access)
 Secure member portal requiring login:
@@ -66,15 +88,42 @@ Secure member portal requiring login:
 - **Health Checks**: Comprehensive service monitoring
 - **Security**: Non-root containers, input sanitization
 
-## 🎨 Design System
+## 🎨 Premium Design System
 
-The site follows a professional agricultural finance aesthetic:
+### **Typography**
+- **Headings**: Space Grotesk (700-800 weight) - Modern, professional sans-serif
+- **Body**: Inter (400-600 weight) - Highly readable, optimized for screens
+- **Sizes**: Fluid clamp() functions for responsive scaling
 
-- **Primary**: Fern Green (#4F7942) - Headers, navigation, trust elements
-- **Secondary**: Sky Blue (#5CA4EA) - Backgrounds, section dividers
-- **Accent**: Goldenrod (#FFC857) - CTAs, highlights, interactive elements
-- **Typography**: Montserrat (headings), Lato (body text)
-- **Layout**: Clean, grid-based design with ample whitespace
+### **Color Palette**
+```css
+/* Brand Colors */
+--brand-green: #2D5016      /* Primary - darker, more sophisticated */
+--brand-green-light: #4F7942 /* Hover states */
+--brand-blue: #0EA5E9        /* Accent - modern sky blue */
+--brand-gold: #F59E0B        /* Highlights */
+
+/* Neutral Scale */
+--neutral-0: #FFFFFF         /* Pure white backgrounds */
+--neutral-50: #FAFAFA        /* Subtle gray backgrounds */
+--neutral-100: #F5F5F5       /* Hover states */
+--neutral-200: #E5E5E5       /* Borders */
+--neutral-600: #525252       /* Muted text */
+--neutral-900: #171717       /* Primary text */
+```
+
+### **Component System**
+- **Cards**: White background, 1px border, subtle shadows, rounded corners (12-16px)
+- **Buttons**: Pill-shaped (border-radius: 9999px), bold hover states with shadow elevation
+- **Shadows**: Layered, subtle (0.03-0.12 opacity) for premium depth
+- **Spacing**: 8px grid with CSS variables (--space-sm, --space-md, etc.)
+- **Transitions**: Cubic bezier (0.4, 0, 0.2, 1) for smooth, natural animations
+
+### **Layout Principles**
+- Max-width containers (1200px for wide, 800px for narrow)
+- Generous whitespace between sections (4-6rem)
+- Alternating background colors (white/neutral-50) for visual rhythm
+- Grid-based card layouts with responsive breakpoints
 
 ## 🚀 Developer Quick Start
 
@@ -243,14 +292,47 @@ FRONTEND_ORIGIN=https://cfafs.com
 - **[CFAFS-UI-Handbook.md](./CFAFS-UI-Handbook.md)** - Design system and UI guidelines
 - **API Documentation** - Available at `/docs` in development mode
 
-## 🛠️ Developer Handoff - Next Steps
+## 👨‍💻 Developer Handoff - Content & Next Steps
 
-### **Immediate Tasks (Priority Order)**
-1. **🌐 Public Pages** - Complete content for all public section pages (see site structure above)
-2. **🔐 Authentication** - Implement JWT-based login system for private member portal
-3. **📈 Member Portal** - Build private section pages (Grower Portal, Reports, etc.)
-4. **💾 Database** - Replace in-memory storage with PostgreSQL (see DEPLOYMENT.md)
-5. **🚀 Production Deploy** - Follow DEPLOYMENT.md for production setup
+### **⚠️ Important: Current State**
+The design system and page structure are complete. **Your primary task is adding real content** to replace placeholder text and images.
+
+### **Content Replacement Tasks**
+
+#### **1. Homepage (`src/app/page.tsx`)**
+- [ ] Replace hero heading and subtext with actual value proposition
+- [ ] Add real SVG icons to `/public/images/` (icon-loans.svg, icon-rates.svg, icon-members.svg)
+- [ ] Update trust indicator numbers ($100M+ loans, 80+ years, etc.)
+- [ ] Add actual executive team names, titles, and photos (circular 120x120px)
+- [ ] Add actual board member names and photos (circular 100x100px)
+- [ ] Update membership benefits list
+
+#### **2. About Page (`src/app/about/page.tsx`)**
+- [ ] Replace mission and history text with actual content
+- [ ] Update timeline milestones (1943, 1980s, 2022, 2025) with real events
+- [ ] Verify company founding year and major milestones
+
+#### **3. Products Page (`src/app/loans/page.tsx`)**
+- [ ] Update loan product names and descriptions
+- [ ] Add real interest rates and terms
+- [ ] Replace placeholder features with actual loan features
+- [ ] Add real SVG/PNG icons for each product type
+
+#### **4. Field Finance Page (`src/app/field-finance/page.tsx`)**
+- [ ] Update platform feature descriptions
+- [ ] Connect demo form to actual backend endpoint
+- [ ] Add real support contact information
+
+#### **5. Navigation Images**
+- [ ] Ensure `/public/images/CFA-01.png` logo exists and is high quality
+- [ ] Add favicon.ico if not already present
+
+### **Technical Tasks**
+1. **🔐 Authentication** - Implement JWT-based login for `/account-login`
+2. **📈 Member Portal** - Build private section pages (currently placeholder)
+3. **💾 Database** - Connect to production database (PostgreSQL)
+4. **📧 Forms** - Connect contact and demo forms to backend/email service
+5. **🌐 SEO** - Update meta descriptions and OG tags with real content
 
 ### **Developer Resources**
 - **📚 [WARP.md](./WARP.md)** - Essential development commands and workflow
