@@ -57,14 +57,14 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
       </head>
-      <body className="antialiased">
-        <header className="site-header textured-nav">
+      <body>
+        <header className="site-header">
           <nav className="primary-nav" role="navigation" aria-label="Main Navigation">
             <div className="nav-container">
               <div className="nav-logo">
-                <Link href="/about" aria-label="About CFA">
+                <Link href="/" aria-label="Home">
                   <div className="nav-logo-bg">
-                    <img src="/images/CFA-01.png" alt="CFA Logo" height="36" />
+                    <img src="/images/CFA-01.png" alt="CFA Logo" style={{ height: 40 }} />
                   </div>
                 </Link>
               </div>
