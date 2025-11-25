@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Enable experimental features for performance
   experimental: {
-    optimizeCss: true,
+    // optimizeCss disabled - requires critters package
   },
   
   // Image optimization
@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
   compress: true,
   
   // Performance optimizations
-  swcMinify: true,
+  // swcMinify removed - default in Next.js 15
   
   // Production environment variables
   env: {

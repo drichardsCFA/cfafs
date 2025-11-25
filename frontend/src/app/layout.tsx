@@ -70,21 +70,28 @@ export default function RootLayout({
               </div>
               <NavToggle />
               <div id="primary-menu" className="nav-menu">
-                <ul style={{ justifyContent: 'flex-end', width: '100%' }}>
-                  <DropdownMenu label="About CFA" href="/about">
-                    <li><Link href="/membership">Members</Link></li>
-                    <li><Link href="/soc-ii">SOC II & Certifications</Link></li>
-                    <li><Link href="/board-members">Board of Directors</Link></li>
+                <ul>
+                  <DropdownMenu label="Home" href="/">
                     <li><Link href="/executive-leadership-team">CFA Executive Team</Link></li>
+                    <li><Link href="/board-members">CFA Board of Directors</Link></li>
+                    <li><Link href="/membership">CFA Membership</Link></li>
+                    <li><Link href="/contact">Contact Us</Link></li>
                   </DropdownMenu>
                   <DropdownMenu label="Products" href="/loans">
                     <li><Link href="/loans">Loan Products</Link></li>
-                    <li><Link href="/field-finance">Field Finance</Link></li>
+                    <li>
+                      <DropdownMenu label="Field Finance" href="/field-finance">
+                        <li><Link href="/field-finance#demo">Request a Demo</Link></li>
+                        <li><Link href="/field-finance#support">Support</Link></li>
+                      </DropdownMenu>
+                    </li>
                   </DropdownMenu>
                   <li><Link href="/careers">Careers</Link></li>
-                  <li><Link href="/about#developers">Partners</Link></li>
-                  <li><Link href="/contact">Contact Us</Link></li>
-                  <li><Link href="/news">Press</Link></li>
+                  <DropdownMenu label="News" href="/news">
+                    <li><Link href="/news">Press</Link></li>
+                    <li><Link href="/about#partners">Partners</Link></li>
+                    <li><Link href="/soc-ii">SOC 2 and Certifications</Link></li>
+                  </DropdownMenu>
                   <li><Link href="/account-login" className="login-btn">Account Login</Link></li>
                 </ul>
               </div>
