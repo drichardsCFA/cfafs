@@ -347,14 +347,16 @@ a:hover {
 .nav-menu .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: 100%;
   left: 0;
   min-width: 220px;
-  background: var(--white);
+  background: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-xl);
-  padding: var(--space-1) 0;
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-sm) 0;
   z-index: 1000;
+  margin-top: var(--space-xs);
 }
 
 .nav-menu .dropdown:hover .dropdown-menu,
@@ -362,20 +364,33 @@ a:hover {
   display: block;
 }
 
+/* Add pseudo-element to bridge gap between toggle and menu */
+.nav-menu .dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  pointer-events: auto;
+}
+
 .nav-menu .dropdown-menu li {
   width: 100%;
 }
 
 .nav-menu .dropdown-menu a {
-  color: var(--color-text);
-  padding: var(--space-2) var(--space-3);
+  color: var(--neutral-700);
+  padding: var(--space-md) var(--space-lg);
   border-radius: 0;
   font-weight: 500;
+  font-size: 0.9375rem;
+  transition: all var(--transition-fast);
 }
 
 .nav-menu .dropdown-menu a:hover {
-  background: var(--color-bg-alt);
-  color: var(--color-primary);
+  background: var(--neutral-100);
+  color: var(--color-text);
 }
 
 /* Nested dropdown */
