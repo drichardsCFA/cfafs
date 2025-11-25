@@ -12,45 +12,48 @@ export default function Home() {
             competitive rates, and unwavering commitment to your success.
           </p>
           <div className="hero-buttons">
-            <Link href="/membership" className="btn btn-primary">Become a Member</Link>
-            <Link href="/loans" className="btn btn-secondary">Explore Products</Link>
+            <Link href="#membership" className="btn btn-primary">Become a Member</Link>
+            <Link href="#products" className="btn btn-secondary">Explore Products</Link>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="section">
+      <section id="products" className="section">
         <div className="container">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-6)' }}>Financial Solutions Built for Agriculture</h2>
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>Financial Solutions Built for Agriculture</h2>
           <div className="grid grid-3">
             <div className="feature-card">
-              <div className="feature-icon">📊</div>
+              <div className="feature-icon">
+                <img src="/images/icon-loans.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.currentTarget.style.display = 'none' }} />
+              </div>
               <h3>Flexible Loan Products</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tailored financial products 
-                designed specifically for the agricultural industry's unique seasonal needs.
+                Tailored financial products designed specifically for the agricultural industry's unique seasonal needs and cash flow cycles.
               </p>
-              <Link href="/loans" style={{ fontWeight: 600 }}>Learn More →</Link>
+              <Link href="#loan-products" style={{ fontWeight: 600, color: 'var(--color-primary)' }}>Learn More →</Link>
             </div>
             
             <div className="feature-card">
-              <div className="feature-icon">💰</div>
+              <div className="feature-icon">
+                <img src="/images/icon-rates.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.currentTarget.style.display = 'none' }} />
+              </div>
               <h3>Competitive Rates</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Access industry-leading 
-                interest rates and flexible terms that work for your business.
+                Access industry-leading interest rates and flexible terms that work for your business with transparent pricing.
               </p>
-              <Link href="/loans" style={{ fontWeight: 600 }}>View Rates →</Link>
+              <Link href="#loan-products" style={{ fontWeight: 600, color: 'var(--color-primary)' }}>View Rates →</Link>
             </div>
             
             <div className="feature-card">
-              <div className="feature-icon">🤝</div>
+              <div className="feature-icon">
+                <img src="/images/icon-members.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.currentTarget.style.display = 'none' }} />
+              </div>
               <h3>Member Benefits</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enjoy patronage dividends, 
-                expert support, and ownership in a cooperative that prioritizes your success.
+                Enjoy patronage dividends, expert support, and ownership in a cooperative that prioritizes your success.
               </p>
-              <Link href="/membership" style={{ fontWeight: 600 }}>Join Today →</Link>
+              <Link href="#membership" style={{ fontWeight: 600, color: 'var(--color-primary)' }}>Join Today →</Link>
             </div>
           </div>
         </div>
@@ -84,17 +87,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section">
+      {/* Membership Section */}
+      <section id="membership" className="section" style={{ background: 'var(--neutral-50)' }}>
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>Become a CFA Member</h2>
+          <div className="grid grid-2">
+            <div className="card">
+              <h3>Member Benefits</h3>
+              <ul style={{ listStyle: 'none', padding: 0 }}>
+                {['Competitive financing rates', 'Patronage dividends', 'Expert agricultural finance support', 'Flexible loan terms', 'Member ownership'].map((benefit) => (
+                  <li key={benefit} style={{ marginBottom: 'var(--space-md)', paddingLeft: 'var(--space-lg)', position: 'relative' }}>
+                    <span style={{ position: 'absolute', left: 0, color: 'var(--color-primary)', fontWeight: 700 }}>✓</span>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="card">
+              <h3>How to Join</h3>
+              <p>Membership is open to agricultural cooperatives and agribusinesses. Our team will guide you through a simple application process.</p>
+              <Link href="#contact" className="btn btn-primary" style={{ marginTop: 'var(--space-lg)' }}>Apply for Membership</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Executive Team Section */}
+      <section id="executive-team" className="section">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>Leadership Team</h2>
+          <div className="grid grid-3">
+            {['CEO', 'CFO', 'COO'].map((title) => (
+              <div key={title} className="card" style={{ textAlign: 'center' }}>
+                <div style={{ width: 120, height: 120, borderRadius: '50%', background: 'var(--neutral-200)', margin: '0 auto var(--space-lg)' }} />
+                <h4>Executive Name</h4>
+                <p style={{ color: 'var(--color-primary)', fontWeight: 600 }}>{title}</p>
+                <p style={{ fontSize: '0.9375rem' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leading CFA with decades of agricultural finance experience.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Board of Directors */}
+      <section id="board" className="section" style={{ background: 'var(--neutral-50)' }}>
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>Board of Directors</h2>
+          <div className="grid grid-3">
+            {['Board Chair', 'Vice Chair', 'Secretary', 'Treasurer', 'Director', 'Director'].map((role, i) => (
+              <div key={i} className="card" style={{ textAlign: 'center' }}>
+                <div style={{ width: 100, height: 100, borderRadius: '50%', background: 'var(--neutral-200)', margin: '0 auto var(--space-md)' }} />
+                <h4>Director Name</h4>
+                <p style={{ color: 'var(--color-primary)', fontWeight: 500, fontSize: '0.875rem' }}>{role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="section">
         <div className="container-narrow" style={{ textAlign: 'center' }}>
-          <h2>Ready to Get Started?</h2>
-          <p style={{ fontSize: '1.125rem', marginBottom: 'var(--space-5)' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Join hundreds of agricultural 
-            cooperatives who trust us for their financing needs.
+          <h2>Get in Touch</h2>
+          <p style={{ fontSize: '1.125rem', marginBottom: 'var(--space-3xl)' }}>
+            Ready to partner with CFA? Our team is here to answer your questions and help you get started.
           </p>
-          <div style={{ display: 'flex', gap: 'var(--space-3)', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 'var(--space-lg)', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/contact" className="btn btn-primary">Contact Us</Link>
-            <Link href="/field-finance#demo" className="btn btn-outline">Request a Demo</Link>
+            <Link href="/field-finance#demo" className="btn btn-secondary">Request a Demo</Link>
           </div>
         </div>
       </section>
