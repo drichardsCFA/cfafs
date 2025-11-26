@@ -7,28 +7,46 @@ export const metadata = {
 export default function BoardMembersPage() {
   const members = [
     {
-      name: "Jane Doe",
-      title: "Board Chair",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus.",
-      photo: "/images/board-placeholder.jpg",
+      name: "Danny Posch",
+      title: "Chair",
+      bio: "Danny Posch has served on the CFA Board since 2012 and is Executive Vice President and CFO of Mid Kansas Cooperative Association. A CPA and longtime cooperative finance leader, he previously worked for Lindburg Vogel Chartered auditing cooperatives and credit unions. He is active in several professional organizations supporting cooperative financial practices.",
+      photo: "/images/board/danny_posch.jpg",
     },
     {
-      name: "John Smith",
-      title: "Treasurer",
-      bio: "Sed feugiat augue vitae ipsum venenatis cursus. Fusce vitae.",
-      photo: "/images/board-placeholder.jpg",
+      name: "Jeremy Wilhelm",
+      title: "Vice-Chair",
+      bio: "Jeremy Wilhelm has served on the CFA Board since becoming CEO of Frontier Cooperative in 2017. He brings extensive experience from prior leadership roles at Western Milling and in agricultural finance at Farm Credit Services of America and U.S. Bank. He also serves on multiple Nebraska industry and foundation boards.",
+      photo: "/images/board/jeremy_wilhelm.jpg",
     },
     {
-      name: "Maria Garcia",
+      name: "Tim Burress",
       title: "Secretary",
-      bio: "Phasellus sodales, dolor eget tincidunt sagittis, neque ligula gravida.",
-      photo: "/images/board-placeholder.jpg",
+      bio: "Tim Burress has served on the CFA Board since 2012 and is the Chief Executive Officer of River Valley Cooperative. He previously spent eight years as River Valley’s CFO and two decades in finance leadership roles at Deere & Company. He also serves on the board of Associated Benefits Corporation.",
+      photo: "/images/board/tim_burress.jpg",
     },
     {
-      name: "Derek Chen",
-      title: "Member at Large",
-      bio: "Suspendisse potenti. Proin nec mi vel eros cursus pretium ac a enim.",
-      photo: "/images/board-placeholder.jpg",
+      name: "Gary Brandt",
+      title: "Treasurer",
+      bio: "Gary Brandt has served on the CFA Board since 2021 and is the Chief Executive Officer of Cooperative Producers, Inc. He has held a wide range of leadership roles in the cooperative system, including operations, energy, and transportation oversight. He also partners in a family farming operation and previously led regional cooperative service groups.",
+      photo: "/images/board/gary_brandt.jpg",
+    },
+    {
+      name: "Jeff Krejdl",
+      title: "Member",
+      bio: "Jeff Krejdl has served on the CFA Board since 2022 and is President and CEO of Ag Valley Cooperative. He previously spent two decades in cooperative finance and operations, including serving as Ag Valley’s CFO before becoming CEO. He is active in the Nebraska cooperative community and participates in national professional organizations.",
+      photo: "/images/board/jeff_krejdl.jpg",
+    },
+    {
+      name: "Joanna McClendon",
+      title: "Member",
+      bio: "Joanna McClendon has served on the CFA Board since 2021 and is Manager of Coop Financial Solutions for Tennessee Farmers Cooperative. She has more than 20 years of experience in cooperative accounting, credit, and financial services, including leading CFS’s recent expansion. She is active in the National Society of Accountants for Cooperatives and other credit industry organizations.",
+      photo: "/images/board/joanna_mcclendon.jpg",
+    },
+    {
+      name: "Jeff Liggett",
+      title: "Member",
+      bio: "ADD BIO HERE!!!!",
+      photo: "/images/board/jeff_liggett.jpg",
     },
   ];
   return (
