@@ -108,7 +108,7 @@ export default function ExecutiveLeadershipTeamPage() {
         <div className="container">
           <div className="grid grid-3">
             {executives.map((exec, idx) => (
-              <div key={exec.name} className="card" style={{ textAlign: 'center' }}>
+              <div key={exec.name} className="card" style={{ textAlign: 'center', margin: 'var(--space-xs)' }}>
                 <img
                   src={exec.photo}
                   alt={`${exec.name} portrait`}
