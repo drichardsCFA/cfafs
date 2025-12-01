@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="grid grid-2">
-            <div className="card">
+            <div className="card" style={{ margin: 'var(--space-md)' }}>
               <h3>Mission</h3>
               <p>
                 The mission of CFA is to strengthen agriculture by providing reliable, flexible financing 
@@ -37,7 +37,7 @@ export default function AboutPage() {
                 that empower growers and agribusinesses to thrive.
               </p>
             </div>
-            <div className="card">
+            <div className="card" style={{ margin: 'var(--space-md)' }}>
               <h3>History</h3>
               <p>
                 Founded in 1943, CFA has a rich history of supporting American agriculture. What began as 
