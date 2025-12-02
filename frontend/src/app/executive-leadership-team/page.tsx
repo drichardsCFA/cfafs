@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ScrollArea } from "@Cfafs.com/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 const executives = [
   {
@@ -96,7 +96,7 @@ export default function ExecutiveLeadershipTeamPage() {
       {/* Hero Section */}
       <section className="section" style={{ background: 'var(--neutral-50)', textAlign: 'center' }}>
         <div className="container">
-          <h1>Executive Leadership Team!!!</h1>
+          <h1>Executive Leadership Team</h1>
           <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Meet the experienced leaders 
             guiding CFA's mission to serve agricultural finance nationwide.
@@ -132,18 +132,19 @@ export default function ExecutiveLeadershipTeamPage() {
                 </p>
                 <button
                   className="btn btn-outline"
-                  style={{ fontSize: '0.875rem', padding: 'var(--space-xs) var(--space-md)' }}
+                  style={{ fontSize: '0.875rem', padding: 'var(--space-xs) var(--space-md) var(--space-xs) var(--space-md)' }}
                   onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                   aria-expanded={openIdx === idx}
                 >
                   {openIdx === idx ? "Hide Bio" : "Learn More"}
                 </button>
                 {openIdx === idx && (
-                  <ScrollArea className="h-[200px]">
-                    <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--gray-200)', textAlign: 'left' }}>
+                  <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--gray-200)', textAlign: 'left' }}>
+                    <ScrollArea className="h-[400px] w-full">
                       {renderBio(exec.fullBio)}
-                    </div>
-                  </ScrollArea>
+                      <ScrollBar orientation="vertical" />
+                    </ScrollArea>
+                  </div>
                 )}
               </div>
             ))}

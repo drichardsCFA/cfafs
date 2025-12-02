@@ -255,6 +255,10 @@ h3.card-title {
   margin-bottom: var(--space-md);
 }
 
+scrollArea.card-scroll {
+  margin-top: var(--space-sm)
+}
+
 /* Premium Buttons */
 .btn {
   display: inline-flex;

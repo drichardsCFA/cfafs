@@ -11,10 +11,10 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@Cfafs.com/components",
-    "utils": "@Cfafs.com/lib/utils",
-    "ui": "@Cfafs.com/components/ui",
-    "lib": "@Cfafs.com/lib",
-    "hooks": "@Cfafs.com/hooks"
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
   }
 }
