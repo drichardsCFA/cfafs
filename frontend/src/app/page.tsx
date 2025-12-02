@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
           <div className="grid grid-3">
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/images/icon-loans.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.currentTarget.style.display = 'none' }} />
+                <img src="/images/icon-loans.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} />
               </div>
               <h3>Flexible Loan Products</h3>
               <p>
@@ -36,7 +38,7 @@ export default function Home() {
             
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/images/icon-rates.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.currentTarget.style.display = 'none' }} />
+                <img src="/images/icon-rates.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} />
               </div>
               <h3>Competitive Rates</h3>
               <p>
@@ -47,7 +49,7 @@ export default function Home() {
             
             <div className="feature-card">
               <div className="feature-icon">
-                <img src="/images/icon-members.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} onError={(e) => { e.currentTarget.style.display = 'none' }} />
+                <img src="/images/icon-members.svg" alt="" style={{ width: 32, height: 32, filter: 'brightness(0) invert(1)' }} />
               </div>
               <h3>Member Benefits</h3>
               <p>

@@ -25,7 +25,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & History Cards */}
-      <section className="section">
+      <section className="section bg-[#F7F7F2]">
         <div className="container">
           <div className="grid grid-2">
             <div className="card" style={{ margin: 'var(--space-md)' }}>
@@ -85,8 +85,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section">
-        <div className="container" style={{ textAlign: 'center' }}>
+      <section className="section bg-[#F7F7F2]">
+        <div className="container " style={{ textAlign: 'center' }}>
           <h2>Ready to Partner with CFA?</h2>
           <p style={{ fontSize: '1.125rem', maxWidth: 600, margin: '0 auto var(--space-2xl)' }}>
             Join hundreds of agricultural cooperatives who trust CFA for their financing needs.

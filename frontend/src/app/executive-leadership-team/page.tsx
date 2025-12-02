@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 const executives = [
   {
-    name: "Russ Johnson",
+    name: "Ross Johnson",
     title: "President",
     shortBio: "Chief Executive Officer",
     fullBio: "Long bio full of sentences and interesting things. Technology and keeping us compliant and spam free.",
@@ -93,7 +93,7 @@ export default function ExecutiveLeadershipTeamPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section" style={{ background: 'var(--color-bg-alt)', textAlign: 'center' }}>
+      <section className="section" style={{ background: 'var(--neutral-50)', textAlign: 'center' }}>
         <div className="container">
           <h1>Executive Leadership Team</h1>
           <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
@@ -104,7 +104,7 @@ export default function ExecutiveLeadershipTeamPage() {
       </section>
 
       {/* Executives Grid */}
-      <section className="section">
+      <section className="section bg-[#F7F7F2]">
         <div className="container">
           <div className="grid grid-3">
             {executives.map((exec, idx) => (
@@ -122,7 +122,7 @@ export default function ExecutiveLeadershipTeamPage() {
                     background: '#e9ecef'
                   }}
                 />
-                <h3 style={{ marginBottom: 'var(--space-xs)' }}>{exec.name}</h3>
+                <h3 className='card-title'style={{ marginBottom: 'var(--space-xs)' }}>{exec.name}</h3>
                 <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
                   {exec.title}
                 </p>
@@ -147,9 +147,6 @@ export default function ExecutiveLeadershipTeamPage() {
           </div>
         </div>
       </section>
-      
-
-      */}
     </>
   );
 }
