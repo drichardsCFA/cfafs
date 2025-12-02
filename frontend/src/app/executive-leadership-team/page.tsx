@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { ScrollArea } from "@Cfafs.com/components/ui/scroll-area";
 
 const executives = [
   {
-    name: "Ross Johnson",
+    name: "Ross H Johnson",
     title: "President",
     shortBio: "Chief Executive Officer",
     fullBio: "Long bio full of sentences and interesting things. Technology and keeping us compliant and spam free.",
@@ -95,7 +96,7 @@ export default function ExecutiveLeadershipTeamPage() {
       {/* Hero Section */}
       <section className="section" style={{ background: 'var(--neutral-50)', textAlign: 'center' }}>
         <div className="container">
-          <h1>Executive Leadership Team</h1>
+          <h1>Executive Leadership Team!!!</h1>
           <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Meet the experienced leaders 
             guiding CFA's mission to serve agricultural finance nationwide.
@@ -138,9 +139,11 @@ export default function ExecutiveLeadershipTeamPage() {
                   {openIdx === idx ? "Hide Bio" : "Learn More"}
                 </button>
                 {openIdx === idx && (
-                  <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--gray-200)', textAlign: 'left' }}>
-                    {renderBio(exec.fullBio)}
-                  </div>
+                  <ScrollArea className="h-[200px]">
+                    <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--gray-200)', textAlign: 'left' }}>
+                      {renderBio(exec.fullBio)}
+                    </div>
+                  </ScrollArea>
                 )}
               </div>
             ))}
