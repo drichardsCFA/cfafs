@@ -5,13 +5,13 @@ export const metadata = {
 };
 export default function MembershipPage() {
   return (
-    <main className="bg-[#F7F7F2] min-h-screen">
-      <section className="max-w-4xl mx-auto text-center py-10 px-4">
+    <main className="min-h-screen" style={{ background: 'var(--neutral-50)'}}>
+      <section className=" max-w-4xl mx-auto text-center py-10 px-4">
         <h1 className="text-4xl md:text-5xl font-extrabold" style={{ color: "#4F7942", fontFamily: "Montserrat,Arial,sans-serif" }}>
           CFAFS Membership
         </h1>
         <p className="mt-6 mb-8 text-xl text-[#495464]" style={{ fontFamily: "Lato, Arial, sans-serif" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Discover a world of exclusive benefits, support, and community by becoming a CFAFS member.
+          ***The Cooperative Finance Association (CFA) is the nation's leading cooperatively owned provider of crop input finance products in the country. CFA has provided reliable financial products and services to the agricultural industry since 1943. Working exclusively with agricultural cooperatives for over 80 years gives us a superior understanding of the operational issues and financing requirements of your customers. CFA offers a full range of financial products and services to agricultural cooperatives and their customers. Our membership-based services include operating and term loans, single-purpose inventory financing, point-of-sale production agriculture financing, and more.
         </p>
         <a
           href="#benefits"
@@ -38,14 +38,14 @@ export default function MembershipPage() {
               {["Exclusive Rates", "Trusted Guidance", "Community Support"][n - 1]}
             </h2>
             <p className="leading-relaxed text-[#495464]" style={{ fontFamily: "Lato,Arial,sans-serif" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales, purus non dictum dictum, justo nisl dictum libero.
+              {["***CFA provides the best possible market rates through our many strategic business partnerships. CFA stays on the cutting edge of the market using technical insights and market agility.", "***With over 80 years in the industry and 50 years partnering with CoBank, CFA can provide the stability and trust you are looking for in a lending partner. Our commmitment to financial success, security, and customer service is unmatched in the industry.", "***CFA strives to craft specific programs and lending solutions for its co-op members so they can be successful, making an impact within their own communities and strengthening rural America. CoBank is there every step of the way to assist CFA on its mission."][n-1]}
             </p>
           </div>
         ))}
       </section>
 
       {/* How Membership Works: Steps */}
-      <section className="bg-[#E6F2EB] py-12 px-4">
+      <section className="bg-[#F7F7F2] py-12 px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-8 text-[#4F7942]" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>
             How Membership Works

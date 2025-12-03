@@ -6,7 +6,7 @@ export default function FieldFinancePage() {
       <section className="hero">
         <div className="container">
           <h1>Field Finance Solutions</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Streamline your field operations with our comprehensive finance management platform.</p>
+          <p>*** CFA's cutting-edge loan origination platform, has been a game-changer for agricultural retailers and producers. By streamlining the financing process and offering unparalleled flexibility, Field Finance empowers users to access tailored solutions that align with their operational needs. The SOC 2 Type 2 certification further enhances Field Finance by providing clients with the assurance that their data is protected by industry-leading security measures.</p>
           <div className="hero-buttons">
             <a href="#demo" className="btn btn-primary">Request Demo</a>
             <a href="#support" className="btn btn-secondary">Get Support</a>

@@ -39,8 +39,7 @@ export default function LoansPage() {
         <div className="container">
           <h1>Flexible Loan Products for Agriculture</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tailored financing solutions 
-            designed specifically for agricultural cooperatives and retailers nationwide.
+            ***CFA offers a comprehensive array of financial products and services that are carefully engineered to fulfill customer needs and satisfy the overall demands of the marketplace. In this regard, particular emphasis is accorded to delivering the types of products and services that exceed expectations and out-perform competitive offerings.
           </p>
           <div className="hero-buttons">
             <Link href="/contact" className="btn btn-primary">Apply Now</Link>
@@ -82,8 +81,7 @@ export default function LoansPage() {
         <div className="container-narrow" style={{ textAlign: 'center' }}>
           <h2>Competitive Interest Rates</h2>
           <p style={{ fontSize: '1.125rem', marginBottom: 'var(--space-5)' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. We offer some of the most competitive 
-            rates in agricultural finance. Contact us today for a personalized quote.
+            ***CFA offers a comprehensive array of financial products and services that are carefully engineered to fulfill customer needs and satisfy the overall demands of the marketplace. In this regard, particular emphasis is accorded to delivering the types of products and services that exceed expectations and out-perform competitive offerings.
           </p>
           <Link href="/contact" className="btn btn-primary">Request a Quote</Link>
         </div>
