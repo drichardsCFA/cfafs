@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero section">
         <div className="container">
           <div className="grid grid-cols-2 w-full gap-40 content-left">
             <div className="content-left">
