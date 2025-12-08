@@ -38,7 +38,7 @@ export default function MembershipPage() {
               {["Exclusive Rates", "Trusted Guidance", "Community Support"][n - 1]}
             </h2>
             <p className="leading-relaxed text-[#495464]" style={{ fontFamily: "Lato,Arial,sans-serif" }}>
-              {["***CFA provides the best possible market rates through our many strategic business partnerships. CFA stays on the cutting edge of the market using technical insights and market agility.", "***With over 80 years in the industry and 50 years partnering with CoBank, CFA can provide the stability and trust you are looking for in a lending partner. Our commmitment to financial success, security, and customer service is unmatched in the industry.", "***CFA strives to craft specific programs and lending solutions for its co-op members so they can be successful, making an impact within their own communities and strengthening rural America. CoBank is there every step of the way to assist CFA on its mission."][n-1]}
+              {["***CFA provides the best possible market rates through our many strategic business partnerships. CFA stays on the cutting edge of the market using technical insights and market agility.", "***With over 80 years in the industry and 50 years partnering with CoBank, CFA can provide the stability and trust you are looking for in a lending partner. Our commmitment to financial success, security, and customer service is unmatched in the industry.", "***CFA delivers tailored financing options designed to empower rural communities and advance cooperative principles. Our cooperative exists to serve the needs of agricultural producers and the cooperatives that are the beneficial owners of CFA. We strive to make a positive impact within our member’s communities, strengthening rural America."][n-1]}
             </p>
           </div>
         ))}
@@ -53,20 +53,55 @@ export default function MembershipPage() {
           <ol className="relative border-l-2 border-[#4F7942]/60 pl-7 space-y-8">
             <li>
               <span className="absolute -left-[1.40em] flex items-center justify-center w-8 h-8 bg-[#FFC857] rounded-full font-extrabold text-[#4F7942] shadow-md">1</span>
-              <span className="font-semibold text-[#4F7942] block mb-2" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>Apply Online</span>
-              <span className="text-[#495464]">Lorem ipsum dolor sit amet, consectetur elit. Fill the short web application form on our secure portal.</span>
+              <span className="font-semibold text-[#4F7942] block mb-2" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>Get A Demo</span>
+              <span className="text-[#495464]">Let one of our representatives show you what CFA can provide for your cooperative and members.</span>
             </li>
             <li>
               <span className="absolute -left-[1.40em] flex items-center justify-center w-8 h-8 bg-[#5CA4EA] rounded-full font-extrabold text-[#495464] shadow-md">2</span>
-              <span className="font-semibold text-[#5CA4EA] block mb-2" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>Get Approved</span>
-              <span className="text-[#495464]">Suspendisse varius, libero non sagittis egestas, sapien enim aliquam ex, et dictum neque turpis nec mi.</span>
+              <span className="font-semibold text-[#5CA4EA] block mb-2" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>Apply Online</span>
+              <span className="text-[#495464]">Eligibility is limited to agricultural cooperatives with a Class A Common Stock purchase of $2,000.</span>
             </li>
             <li>
               <span className="absolute -left-[1.40em] flex items-center justify-center w-8 h-8 bg-[#4F7942] rounded-full font-extrabold text-[#FFC857] shadow-md">3</span>
               <span className="font-semibold text-[#4F7942] block mb-2" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>Enjoy Benefits</span>
-              <span className="text-[#495464]">Mauris malesuada, mi a dictum efficitur, massa felis molestie urna, non egestas urna justo a quam.</span>
+              <span className="text-[#495464]">Enjoy access to CFA's wide range of financial products and services. A substantial portion of our earnings are also returned to our members as a patronage refund.</span>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section className="section bg-[#F7F7F2]">
+        <div className="container">
+          <div className="grid grid-cols-2">
+            <div style={{ textAlign: 'center' }}>
+              <h3>
+                Mission
+              </h3>
+              <p>
+                Founded in 1943, CFA has a rich history of supporting American agriculture.
+              </p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3>History</h3>
+              <p>
+                Founded in 1943, CFA has a rich history of supporting American agriculture.
+              </p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3>
+                Mission
+              </h3>
+              <p>
+                Founded in 1943, CFA has a rich history of supporting American agriculture.
+              </p>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <h3>History</h3>
+              <p>
+                Founded in 1943, CFA has a rich history of supporting American agriculture.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

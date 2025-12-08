@@ -94,7 +94,7 @@ export default function ExecutiveLeadershipTeamPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="section" style={{ background: 'var(--neutral-50)', textAlign: 'center' }}>
+      <section className="section hero" style={{textAlign: 'center' }}>
         <div className="container">
           <h1>Executive Leadership Team</h1>
           <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>

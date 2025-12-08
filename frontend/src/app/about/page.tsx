@@ -11,15 +11,24 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="hero">
         <div className="container">
-          <h1>Financial Services for Successful Agriculture</h1>
-          <p>
-            The Cooperative Finance Association partners with agricultural cooperatives and agribusinesses 
-            to deliver customized input financing solutions. With over 80 years of industry experience, 
-            we streamline credit access for growers and support stronger rural economies.
-          </p>
-          <div className="hero-buttons">
-            <Link href="/membership" className="btn btn-primary">Become a Member</Link>
-            <Link href="/contact" className="btn btn-secondary">Contact Us</Link>
+          <div className="grid grid-cols-2 w-full gap-40 content-left">
+            <div className="content-left">
+              <img
+                src={`images/leadership_retreat.jpg`}
+                alt={`CFA Leadership Retreat`}
+                style={{ width: 600 }}
+              />
+            </div>
+            <div>
+              <h1>Financial Services for Successful Agriculture</h1>
+              <p>
+                At CFA we provide a full range of financial products and services to agricultural cooperatives and their members. Through strategic partnership, agribusiness insights, and technological innovation our cooperative can provide yours with industry leading customer service and value.  Choose to partner with the market leader in agriculture input financing.
+              </p>
+              <div className="hero-buttons">
+                <Link href="/membership" className="btn btn-primary">Become a Member</Link>
+                <Link href="/contact" className="btn btn-secondary">Contact Us</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -31,19 +40,13 @@ export default function AboutPage() {
             <div className="card" style={{ margin: 'var(--space-md)' }}>
               <h3>Mission</h3>
               <p>
-                The mission of CFA is to strengthen agriculture by providing reliable, flexible financing 
-                solutions to cooperatives and their farmer-members. We are committed to supporting rural 
-                communities through strategic partnerships, expert financial services, and innovative programs 
-                that empower growers and agribusinesses to thrive.
+                CFA exists to serve the needs of agricultural producers and the cooperatives that are the beneficial owners of CFA. Success in today’s competitive financial services marketplace demands knowing our customers intimately and providing the services and products needed in a timely, convenient, and affordable manner. We focus our ongoing support to the local cooperative network in a partnership to achieve mutual goals and further common interests. Consistent financial performance provides attractive ownership returns through patronage and ensures CFA's ability to realize its long-term potential. A key element of this endeavor is to maintain a competent, committed, and versatile team of employees who are valued and accorded the highest professional regard and recognition.
               </p>
             </div>
             <div className="card" style={{ margin: 'var(--space-md)' }}>
               <h3>History</h3>
               <p>
-                Founded in 1943, CFA has a rich history of supporting American agriculture. What began as 
-                a cooperative effort to improve credit access for farmers has grown into a trusted financial 
-                partner for agribusinesses nationwide, with over 80 years of experience in delivering 
-                dependable input financing solutions.
+                Founded in 1943, CFA has a rich history of supporting American agriculture. What began as a cooperative effort to improve credit access for farmers has grown into a trusted financial partner for agribusinesses nationwide, has turned into the largest input finance provider in agriculture. With over 80 years of experience in delivering dependable input financing solutions, we are still committed to the principles of the federated cooperative system by providing access to capital through strategic partnership, technologic innovations, and industry leading customer service to support our member cooperatives.
               </p>
             </div>
           </div>
@@ -89,7 +92,7 @@ export default function AboutPage() {
         <div className="container " style={{ textAlign: 'center' }}>
           <h2>Ready to Partner with CFA?</h2>
           <p style={{ fontSize: '1.125rem', maxWidth: 600, margin: '0 auto var(--space-2xl)' }}>
-            Join hundreds of agricultural cooperatives who trust CFA for their financing needs.
+            CFA provides solutions for the needs of any sized agricultural cooperative. Whether it be some of the oldest and well established to growing and specialized organizations, we have a variety of solutions for your needs. Learn more about becoming a member to learn what services and products we can provide to add value to your cooperative and its members.
           </p>
           <Link href="/membership" className="btn btn-primary">Join CFA Today</Link>
         </div>

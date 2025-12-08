@@ -668,7 +668,7 @@ footer.site-footer {
 
 /* Premium Hero Section */
 .hero {
-  background: linear-gradient(180deg, var(--neutral-0) 0%, var(--neutral-50) 100%);
+  background: linear-gradient(180deg, var(--neutral-0) 0%, #E6F2EB 100%);
   padding: var(--space-5xl) 0 var(--space-4xl);
   text-align: center;
   position: relative;
@@ -719,7 +719,7 @@ footer.site-footer {
 /* Grid Layouts */
 .grid {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-md);
 }
 
 .grid-2 {
