@@ -13,9 +13,17 @@ export default function MembershipPage() {
           <div className="grid grid-cols-2 w-full gap-40 content-left">
             <div className="content-left">
               <img
-                src={`images/leadership_retreat.jpg`}
-                alt={`CFA Leadership Retreat`}
-                style={{ width: 600 }}
+                src={`images/wheatfield.png`}
+                alt={`Membership Marketing Photo`}
+                style={{
+                  width: 600,
+                  height: 600,
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  margin: '0 auto var(--space-md)',
+                  border: '4px solid var(--color-accent)',
+                  background: '#e9ecef'
+                }}
               />
             </div>
             <div>
@@ -118,9 +126,9 @@ export default function MembershipPage() {
               </p>
             </div>
             <div style={{ textAlign: 'center' }}>
-              <h3>Technological Innovations</h3>
+              <h3>Technological Innovation</h3>
               <p>
-                We put security and improving our product offerings as a top priority. By constantly reassessing our offerings and processes, we are able to reengineer or products and services to remain competitive in today's financial market. All of this is done with providing our memberss the highest quality offerings in a timely, convenient, and affordable manner.
+                We put security and improving our product offerings as a top priority. By constantly reassessing our offerings and processes, we are able to reengineer our products and services to remain competitive in today's financial market. All of this is done with providing our memberss the highest quality offerings in a timely, convenient, and affordable manner.
               </p>
             </div>
           </div>

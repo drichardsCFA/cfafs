@@ -94,12 +94,32 @@ export default function ExecutiveLeadershipTeamPage() {
   return (
     <>
       {/* Hero Section */}
+
       <section className="section hero" style={{textAlign: 'center' }}>
         <div className="container">
-          <h1>Executive Leadership Team</h1>
-          <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
-            ***Our leadership team is driven to be a customer-focused, market-driven, profitable, financial services cooperative by providing innovative input financing services designed to empower rural communities and advance cooperative principles.
-          </p>
+          <div className="grid grid-cols-2 w-full gap-6 content-left">
+            <div className="content-left">
+              <img
+                src="images/leadership_retreat.jpg"
+                alt="Leadership Retreat Photo"
+                style={{
+                  width: 600,
+                  height: 600,
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  margin: '0 auto var(--space-md)',
+                  border: '4px solid var(--color-accent)',
+                  background: '#e9ecef'
+                }}
+              />
+            </div>
+            <div>
+              <h1>Executive Leadership Team</h1>
+              <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
+                ***Our leadership team is driven to be a customer-focused, market-driven, profitable, financial services cooperative by providing innovative input financing services designed to empower rural communities and advance cooperative principles.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -12,7 +12,6 @@ services:
       - ./frontend/public:/app/public
       - ./frontend/next.config.ts:/app/next.config.ts
       - ./frontend/tsconfig.json:/app/tsconfig.json
-      - ./frontend/tailwind.config.ts:/app/tailwind.config.ts
       - ./frontend/postcss.config.mjs:/app/postcss.config.mjs
       # Keep node_modules in container
       - /app/node_modules

@@ -11,18 +11,26 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="hero section">
         <div className="container">
-          <div className="grid grid-cols-2 w-full gap-40 content-left">
+          <div className="grid grid-cols-2 w-full gap-6 content-left">
             <div className="content-left">
               <img
-                src={`images/leadership_retreat.jpg`}
-                alt={`CFA Leadership Retreat`}
-                style={{ width: 600 }}
+                src="images/handshake.png"
+                alt="About Us Marketing Photo"
+                style={{
+                  width: 600,
+                  height: 600,
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  margin: '0 auto var(--space-md)',
+                  border: '4px solid var(--color-accent)',
+                  background: '#e9ecef'
+                }}
               />
             </div>
             <div>
               <h1>Financial Services for Successful Agriculture</h1>
               <p>
-                At CFA we provide a full range of financial products and services to agricultural cooperatives and their members. Through strategic partnership, agribusiness insights, and technological innovation our cooperative can provide yours with industry leading customer service and value.  Choose to partner with the market leader in agriculture input financing.
+                At CFA we provide a full range of financial products and services to agricultural cooperatives and their members. Through strategic partnership, agribusiness insights, and technological innovation our cooperative provides you with industry leading customer service and value. Put your trust in CFA, the market leader in agriculture input financing. 
               </p>
               <div className="hero-buttons">
                 <Link href="/membership" className="btn btn-primary">Become a Member</Link>
@@ -46,7 +54,13 @@ export default function AboutPage() {
             <div className="card" style={{ margin: 'var(--space-md)' }}>
               <h3>History</h3>
               <p>
-                Founded in 1943, CFA has a rich history of supporting American agriculture. What began as a cooperative effort to improve credit access for farmers has grown into a trusted financial partner for agribusinesses nationwide, has turned into the largest input finance provider in agriculture. With over 80 years of experience in delivering dependable input financing solutions, we are still committed to the principles of the federated cooperative system by providing access to capital through strategic partnership, technologic innovations, and industry leading customer service to support our member cooperatives.
+                CFA began in 1943 as a collective effort to improve credit access for local farmers, to promote rural development and to increase agricultural productivity.
+              </p>
+              <p>
+                Operating with 80+ years of experience, CFA offers dependable input financing solutions. Since our inception, we’ve grown into a trusted financial partner for farmers and agribusinesses while transforming into the largest input finance provider in agriculture.
+              </p>
+              <p>
+                Yet throughout our unprecedented growth, we remain committed to the principles of the federated cooperative system via capital access, strategic partnerships, technologic innovations, and exceptional customer service to support our member cooperatives.
               </p>
             </div>
           </div>

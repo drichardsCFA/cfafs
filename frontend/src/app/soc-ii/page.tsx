@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "SOC II & Certifications | CFAFS",
   description: "Learn about CFAFS&apos;s SOC II compliance, certifications, and privacy practices.",
@@ -6,28 +8,64 @@ export const metadata = {
 export default function SocIIPage() {
   return (
     <main className="bg-[#F7F7F2] min-h-screen">
+      <section className="hero section">
+        <div className="container">
+          <div className="grid grid-cols-2 w-full gap-6 content-left">
+            <div className="content-left">
+              <img
+                src="images/fieldoffice.jpg"
+                alt="About Us Marketing Photo"
+                style={{
+                  width: 600,
+                  height: 600,
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  margin: '0 auto var(--space-md)',
+                  border: '4px solid var(--color-accent)',
+                  background: '#e9ecef'
+                }}
+              />
+            </div>
+            <div>
+              <h1>Security and Certifications</h1>
+              <p>
+                "This accomplishment is a direct result of our team's hard work and shared vision. SOC 2 Type 2 compliance is not just about meeting a standard, it's about demonstrating our ongoing commitment to protecting our clients' data and ensuring operational integrity. This achievement reinforces our position as a trusted partner in agricultural financing."
+              </p>
+              <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
+                Jordan Nussbaum - Chief Security Officer
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section classname="">
+        
+      </section>
       <section className="max-w-4xl mx-auto text-center py-10 px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-4" style={{ color: "#4F7942", fontFamily: "Montserrat,Arial,sans-serif" }}>
-          SOC II & Certifications
-        </h1>
-        <p className="mt-6 mb-8 text-xl text-[#495464]" style={{ fontFamily: "Lato, Arial, sans-serif" }}>
-          ***Our belief is that technology is a vital tool for nearly every business to maintain an efficient workflow. The Cooperative Finance Association is embracing and utilizing technology to deliver its products and services completely electronically, streamlining the process for its members as it serves as a reliable lender for the agricultural industry. With that belief, security is our highest priority.
-        </p>
         <div className="rounded-2xl bg-white border shadow-sm p-7 flex flex-col items-center hover:shadow-md transition-all min-h-[210px]">
           <h2 className="font-bold text-xl mb-2" style={{ color: "#5CA4EA", fontFamily: "Montserrat,Arial,sans-serif" }}>
-            Why SOC II Matters
+            SOC 2 Type II Certified
           </h2>
           <p className="leading-relaxed text-[#495464]" style={{ fontFamily: "Lato,Arial,sans-serif" }}>
-            ***Currently, CFA is undertaking a technology platform update, which will prioritize the security of its customers while making the application easier to navigate on all devices. The association also modernized its signature collection process—now allowing co-op customers to obtain customer signatures electronically. With this transition, our members can be assured of the security of our platform after achieving this certification in early 2025.
+            The Cooperative Finance Association is proud to have achieved our SOC 2 Type II certification, demonstrating our ongoing commitment to the highest standards of security, availability, and data protection. This independent audit validates that our internal controls and processes are not only well-designed but also effectively operated over time—ensuring your data is handled with trust, transparency, and integrity.
           </p>
+          <p className="leading-relaxed text-[#495464]" style={{ fontFamily: "Lato,Arial,sans-serif" }}>
+            We are committed to maintaining this standard and will continue to pursue SOC 2 Type II certification on an annual basis.
+          </p>
+          <Link target="_blank" href="https://www.prnewswire.com/news-releases/cfa-achieves-soc-2-type-2-certification-cementing-leadership-in-agricultural-input-financing-302427129.html" className="btn btn-primary" style={{ textAlign: 'center' }}>
+            Learn More
+          </Link>
         </div>
         <div className="rounded-2xl bg-white border shadow-sm p-7 flex flex-col items-center hover:shadow-md transition-all min-h-[210px] mt-8">
           <h2 className="font-bold text-xl mb-2" style={{ color: "#5CA4EA", fontFamily: "Montserrat,Arial,sans-serif" }}>
             Privacy Practices
           </h2>
           <p className="leading-relaxed text-[#495464]" style={{ fontFamily: "Lato,Arial,sans-serif" }}>
-            ***SOC 2 Type II Certified: The Cooperative Finance Association is proud to have achieved our SOC 2 Type II certification, demonstrating our ongoing commitment to the highest standards of security, availability, and data protection. This independent audit validates that our internal controls and processes are not only well-designed but also effectively operated over time—ensuring your data is handled with trust, transparency, and integrity. We are committed to maintaining this standard and will continue to pursue SOC 2 Type II certification on an annual basis.
+            The successful completion of this certification reflects CFA's dedication to continuous improvement and collaboration. It highlights the organization's ability to adapt to evolving regulatory requirements while maintaining its focus on delivering exceptional value to clients.
           </p>
+          <Link href="/privacy" className="btn btn-primary" style={{ textAlign: 'center' }}>
+            Learn More
+          </Link>
         </div>
       </section>
     </main>
