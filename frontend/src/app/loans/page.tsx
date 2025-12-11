@@ -41,31 +41,14 @@ export default function LoansPage() {
     <>
       <section className="hero">
         <div className="container">
-          <div className="grid grid-cols-2 w-full gap-6 content-left">
-            <div className="content-left">
-              <img
-                src="images/centerpivotsunset.png"
-                alt="Marketing Photo"
-                style={{
-                  width: 600,
-                  height: 600,
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  margin: '0 auto var(--space-md)',
-                  border: '4px solid var(--color-accent)',
-                  background: '#e9ecef'
-                }}
-              />
-            </div>
-            <div>
-              <h1>Flexible Loan Products for Agriculture</h1>
-              <p>
-                ***CFA offers a comprehensive array of financial products and services that are carefully engineered to fulfill customer needs and satisfy the overall demands of the marketplace. In this regard, particular emphasis is accorded to delivering the types of products and services that exceed expectations and out-perform competitive offerings.
-              </p>
-              <div className="hero-buttons">
-                <Link href="/contact" className="btn btn-primary">Apply Now</Link>
-                <Link href="/field-finance#demo" className="btn btn-secondary">Request a Demo</Link>
-              </div>
+          <div>
+            <h1>Flexible Loan Products for Agriculture</h1>
+            <p>
+              CFA offers a comprehensive array of financial products and services that are carefully engineered to fulfill customer needs and satisfy the overall demands of the marketplace. In this regard, particular emphasis is accorded to delivering the types of products and services that exceed expectations and out-perform competitive offerings.
+            </p>
+            <div className="hero-buttons">
+              <Link href="/contact" className="btn btn-primary">Apply Now</Link>
+              <Link href="/field-finance#demo" className="btn btn-secondary">Request a Demo</Link>
             </div>
           </div>
         </div>

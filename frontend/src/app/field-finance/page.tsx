@@ -6,7 +6,7 @@ export default function FieldFinancePage() {
       <section className="section hero">
         <div className="container">
           <h1>Field Finance Solutions</h1>
-          <p>*** CFA's cutting-edge loan origination platform, has been a game-changer for agricultural retailers and producers. By streamlining the financing process and offering unparalleled flexibility, Field Finance empowers users to access tailored solutions that align with their operational needs. Request a demo today to learn more about our input financing products.</p>
+          <p>CFA's cutting-edge loan origination platform, has been a game-changer for agricultural retailers and producers. By streamlining the financing process and offering unparalleled flexibility, Field Finance empowers users to access tailored solutions that align with their operational needs. Request a demo today to learn more about our input financing products.</p>
           <div className="hero-buttons">
             <a href="#demo" className="btn btn-primary">Request Demo</a>
           </div>

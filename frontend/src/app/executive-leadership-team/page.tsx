@@ -3,13 +3,25 @@
 import React, { useState } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
 const executives = [
   {
     name: "Ross Johnson",
     title: "President",
     shortBio: "Chief Executive Officer",
-    fullBio: "Long bio full of sentences and interesting things. Technology and keeping us compliant and spam free.",
-    photo: "/images/board-placeholder.jpg",
+    fullBio: "Ross serves as President and CEO of The Cooperative Finance Association, a position he assumed on January 1, 2018.  He has nearly 40 years of experience in the financial services industry,  having held executive positions in the Farm Credit System, as well as commercial banking and mortgage banking industries.  Ross grew up on a family farm and still maintains active farming interests..",
+    photo: "/images/ross_johnson.jpg",
   },
   {
     name: "Doug Richards",
@@ -26,7 +38,7 @@ const executives = [
     title: "Sr. Vice President",
     shortBio: "Chief Marketplace Officer",
     fullBio: "Long bio full of sentences and interesting things. Technology and keeping us compliant and spam free.",
-    photo: "/images/board-placeholder.jpg",
+    photo: "/images/justin_morris.png",
   },
   {
     name: "Keith Becker",
@@ -44,8 +56,13 @@ const executives = [
     name: "Stephen Hoeffer",
     title: "Sr. Vice President",
     shortBio: "Chief Financial Officer",
-    fullBio: "Long bio full of sentences and interesting things. Technology and keeping us compliant and spam free.",
-    photo: "/images/board-placeholder.jpg",
+    fullBio: [
+      "Stephen Hoefer – Senior Vice President/Chief Financial Officer - Stephen Hoefer serves as Senior Vice President & Chief Financial Officer at The Cooperative Finance Association (CFA), overseeing the organization’s financial strategy, accounting operations, capital management, and enterprise risk oversight. He plays a key role in supporting CFA’s mission by strengthening financial reporting, enhancing operational efficiency, and ensuring a sound financial foundation for long-term organizational growth.",
+      "Stephen joined CFA in 2022 after building extensive experience across public accounting, financial services, and private equity. He began his career with PricewaterhouseCoopers (PwC) in the Financial Services Assurance Practice, specializing in clients within the Banking & Capital Markets and Asset Management sectors. Over six years at PwC, he advanced to Assurance Manager, developing deep technical expertise in financial governance, internal controls, and complex audit engagements.",
+      "Prior to CFA, Stephen spent six years as a Fund Controller at Platform Ventures, where he oversaw accounting, reporting, and operational processes for private equity real estate funds investing in real estate and related assets.",
+      "Stephen holds a Master of Science in Accounting from Boston College’s Carroll School of Management and a Bachelor of Science in Business Administration with an emphasis in Accounting from Rockhurst University’s Helzberg School of Management. He brings a strong analytical approach, a commitment to operational clarity, and a focus on advancing CFA’s mission of providing dependable financial solutions to agricultural cooperatives nationwide.",
+    ],
+    photo: "/images/stephen_hoeffer.png",
   },
   {
     name: "Joe Funk",
@@ -97,28 +114,11 @@ export default function ExecutiveLeadershipTeamPage() {
 
       <section className="section hero" style={{textAlign: 'center' }}>
         <div className="container">
-          <div className="grid grid-cols-2 w-full gap-6 content-left">
-            <div className="content-left">
-              <img
-                src="images/leadership_retreat.jpg"
-                alt="Leadership Retreat Photo"
-                style={{
-                  width: 600,
-                  height: 600,
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  margin: '0 auto var(--space-md)',
-                  border: '4px solid var(--color-accent)',
-                  background: '#e9ecef'
-                }}
-              />
-            </div>
-            <div>
-              <h1>Executive Leadership Team</h1>
-              <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
-                ***Our leadership team is driven to be a customer-focused, market-driven, profitable, financial services cooperative by providing innovative input financing services designed to empower rural communities and advance cooperative principles.
-              </p>
-            </div>
+          <div>
+            <h1>Executive Leadership Team</h1>
+            <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
+              Our leadership team is driven to be a customer-focused, market-driven, profitable, financial services cooperative by providing innovative input financing services designed to empower rural communities and advance cooperative principles.
+            </p>
           </div>
         </div>
       </section>
@@ -128,41 +128,57 @@ export default function ExecutiveLeadershipTeamPage() {
         <div className="container">
           <div className="grid grid-3">
             {executives.map((exec, idx) => (
-              <div key={exec.name} className="card" style={{ textAlign: 'center', margin: 'var(--space-xs)' }}>
-                <img
-                  src={exec.photo}
-                  alt={`${exec.name} portrait`}
-                  style={{
-                    width: 120,
-                    height: 120,
-                    objectFit: 'cover',
-                    borderRadius: '50%',
-                    margin: '0 auto var(--space-md)',
-                    border: '4px solid var(--color-accent)',
-                    background: '#e9ecef'
-                  }}
-                />
-                <h3 className='card-title'style={{ marginBottom: 'var(--space-xs)' }}>{exec.name}</h3>
-                {/*<p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>{exec.title}</p> */}
-                <p style={{ fontSize: '0.95rem', marginBottom: 'var(--space-sm)' }}>
-                  {exec.shortBio}
-                </p>
-                <button
-                  className="btn btn-outline"
-                  style={{ fontSize: '0.875rem', padding: 'var(--space-xs) var(--space-md) var(--space-xs) var(--space-md)' }}
-                  onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                  aria-expanded={openIdx === idx}
-                >
-                  {openIdx === idx ? "Hide Bio" : "Learn More"}
-                </button>
-                {openIdx === idx && (
-                  <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--gray-200)', textAlign: 'left' }}>
-                    <ScrollArea className="h-[300px] w-full">
-                      {renderBio(exec.fullBio)}
-                      <ScrollBar orientation="vertical" />
-                    </ScrollArea>
-                  </div>
-                )}
+              <div key={exec.name} className="card grid" style={{ textAlign: 'center', margin: 'var(--space-xs)' }}>
+                <div className="grid items-start">
+                  <img
+                    src={exec.photo}
+                    alt={`${exec.name} portrait`}
+                    style={{
+                      width: 120,
+                      height: 120,
+                      objectFit: 'cover',
+                      borderRadius: '50%',
+                      margin: '0 auto var(--space-md)',
+                      border: '4px solid var(--color-accent)',
+                      background: '#e9ecef'
+                    }}
+                  />
+                  <h3 className='card-title'style={{ marginBottom: 'var(--space-xs)' }}>{exec.name}</h3>
+                  {/*<p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>{exec.title}</p> */}
+                  <p style={{ fontSize: '0.95rem', marginBottom: 'var(--space-sm)' }}>
+                    {exec.shortBio}
+                  </p>
+                </div>
+                <div className='grid items-end' style={{ textAlign: 'center'}}>
+                  <Dialog>
+                    <form>
+                      <DialogTrigger asChild>
+                        <Button className="btn-primary btn" variant="outline">View Bio</Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[750px]">
+                        <DialogHeader>
+                            <img
+                              src={exec.photo}
+                              alt={`${exec.name} portrait`}
+                              style={{
+                                width: 120,
+                                height: 120,
+                                objectFit: 'cover',
+                                borderRadius: '50%',
+                                margin: '0 auto var(--space-md)',
+                                border: '4px solid var(--color-accent)',
+                                background: '#e9ecef'
+                              }}
+                            />
+                          <DialogTitle style={{ textAlign: 'center'}}>{exec.name}</DialogTitle>
+                          <DialogDescription style={{ textAlign: 'left'}}>
+                            {exec.fullBio}
+                          </DialogDescription>
+                        </DialogHeader>
+                      </DialogContent>
+                    </form>
+                  </Dialog>
+                </div>
               </div>
             ))}
           </div>

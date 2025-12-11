@@ -80,7 +80,7 @@ const members = [
     name: "Mark Orr",
     title: "Member",
     bio: "Mark Orr has served on the CFA Board since 2025 and is the Chief Executive Officer of GROWMARK, Inc., where he leads an agricultural cooperative serving the U.S. and Canada across wholesale distribution, ag retail, energy, grain, and financial services. He brings more than 36 years of experience in cooperative leadership across finance, supply chain, and member services. He also serves on multiple national industry boards supporting cooperative advancement and agricultural education.",
-    photo: "",
+    photo: "/images/placeholder.png",
   },
   {
     name: "Jeff Liggett",
@@ -113,140 +113,75 @@ export default function BoardMemberPage() {
 
       <section className="section hero" style={{textAlign: 'center' }}>
         <div className="container">
-          <div className="grid grid-cols-2 w-full gap-6 content-left">
-            <div className="content-left">
-              <img
-                src="images/centerpivot.png"
-                alt="Marketing Photo"
-                style={{
-                  width: 600,
-                  height: 600,
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  margin: '0 auto var(--space-md)',
-                  border: '4px solid var(--color-accent)',
-                  background: '#e9ecef'
-                }}
-              />
-            </div>
-            <div>
-              <h1>Meet Our Board of Directors</h1>
-              <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
-            ***The board of directors is committed to provided insight and guidance to advance CFA's market position and provide value by representing our members.
-              </p>
-            </div>
+          <div>
+            <h1>Meet Our Board of Directors</h1>
+            <p style={{ fontSize: '1.125rem', maxWidth: 700, margin: '0 auto' }}>
+              The board of directors is committed to provided insight and guidance to advance CFA's market position and provide value by representing our members.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Executives Grid */}
+
       <section className="section bg-[#F7F7F2]">
         <div className="container">
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-2">
             {members.map((member, idx) => (
-              <div key={member.name} className="card" style={{ textAlign: 'center', margin: 'var(--space-xs)' }}>
-                <img
-                  src={member.photo}
-                  alt={`${member.name} portrait`}
-                  style={{
-                    width: 120,
-                    height: 120,
-                    objectFit: 'cover',
-                    borderRadius: '50%',
-                    margin: '0 auto var(--space-md)',
-                    border: '4px solid var(--color-accent)',
-                    background: '#e9ecef'
-                  }}
-                />
-                <h3 className='card-title'style={{ marginBottom: 'var(--space-xs)' }}>{member.name}</h3>
-                <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
-                  {member.title}
-                </p>
-                <button
-                  className="btn btn-outline"
-                  style={{ fontSize: '0.875rem', padding: 'var(--space-xs) var(--space-md) var(--space-xs) var(--space-md)' }}
-                  onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                  aria-expanded={openIdx === idx}
-                >
-                  {openIdx === idx ? "Hide Bio" : "Learn More"}
-                </button>
-                {openIdx === idx && (
-                  <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-md)', borderTop: '1px solid var(--gray-200)', textAlign: 'left' }}>
-                    <ScrollArea className="h-[300px] w-full">
-                      {renderBio(member.bio)}
-                      <ScrollBar orientation="vertical" />
-                    </ScrollArea>
+              <div key={member.name} className="card" style={{ textAlign: 'left', margin: 'var(--space-xs)' }}>
+                <div className="grid grid-cols-3">
+                  <img
+                    src={member.photo}
+                    alt={`${member.name} portrait`}
+                    style={{
+                      width: 120,
+                      height: 120,
+                      objectFit: 'cover',
+                      borderRadius: '50%',
+                      margin: '0 auto var(--space-md)',
+                      border: '4px solid var(--color-accent)',
+                      background: '#e9ecef'
+                    }}
+                  />
+                  <div style={{ textAlign: 'left'}}>
+                    <h3 className='card-title'style={{ marginBottom: 'var(--space-xs)' }}>{member.name}</h3>
+                    <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
+                      {member.title}
+                    </p>
                   </div>
-                )}
+                  <div style={{ textAlign: 'right'}}>
+                    <Dialog>
+                      <form>
+                        <DialogTrigger asChild>
+                          <Button className="btn btn-primary" variant="outline">View Bio</Button>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[625px]">
+                          <DialogHeader>
+                              <img
+                                src={member.photo}
+                                alt={`${member.name} portrait`}
+                                style={{
+                                  width: 120,
+                                  height: 120,
+                                  objectFit: 'cover',
+                                  borderRadius: '50%',
+                                  margin: '0 auto var(--space-md)',
+                                  border: '4px solid var(--color-accent)',
+                                  background: '#e9ecef'
+                                }}
+                              />
+                            <DialogTitle style={{ textAlign: 'center'}}>{member.name}</DialogTitle>
+                            <DialogDescription style={{ textAlign: 'left'}}>
+                              {member.bio}
+                            </DialogDescription>
+                          </DialogHeader>
+                        </DialogContent>
+                      </form>
+                    </Dialog>
+                  </div>
+                </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-
-      <section className="section bg-[#F7F7F2]">
-        <div className="container">
-          <div>
-            <Table>
-              <TableBody>
-                {members.map((member, idx) => (
-                  <TableRow key={`board_member_${member.idx}`}>
-                    <TableCell className="w-[150px]">
-                      <img
-                        src={member.photo}
-                        alt={`${member.name} portrait`}
-                        style={{
-                          width: 120,
-                          height: 120,
-                          objectFit: 'cover',
-                          borderRadius: '50%',
-                          margin: '0 auto var(--space-md)',
-                          border: '4px solid var(--color-accent)',
-                          background: '#e9ecef'
-                        }}
-                      />
-                    </TableCell>
-                    <TableCell className="w-[250px]">
-                      <h3 className='card-title'style={{ marginBottom: 'var(--space-xs)' }}>{member.name}</h3>
-                      <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
-                        {member.title}
-                      </p>
-                    </TableCell>
-                    <TableCell className="w-[100px]">
-                      <Dialog>
-                        <form>
-                          <DialogTrigger asChild>
-                            <Button variant="outline">View Bio</Button>
-                          </DialogTrigger>
-                          <DialogContent className="sm:max-w-[425px]">
-                            <DialogHeader>
-                                <img
-                                  src={member.photo}
-                                  alt={`${member.name} portrait`}
-                                  style={{
-                                    width: 120,
-                                    height: 120,
-                                    objectFit: 'cover',
-                                    borderRadius: '50%',
-                                    margin: '0 auto var(--space-md)',
-                                    border: '4px solid var(--color-accent)',
-                                    background: '#e9ecef'
-                                  }}
-                                />
-                              <DialogTitle>{member.name}</DialogTitle>
-                              <DialogDescription>
-                                {member.bio}
-                              </DialogDescription>
-                            </DialogHeader>
-                          </DialogContent>
-                        </form>
-                      </Dialog>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
           </div>
         </div>
       </section>

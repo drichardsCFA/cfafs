@@ -10,33 +10,16 @@ export default function MembershipPage() {
     <main className="min-h-screen">
       <section className="section mx-auto text-center py-10 px-4 hero">
         <div className="container">
-          <div className="grid grid-cols-2 w-full gap-40 content-left">
-            <div className="content-left">
-              <img
-                src={`images/wheatfield.png`}
-                alt={`Membership Marketing Photo`}
-                style={{
-                  width: 600,
-                  height: 600,
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  margin: '0 auto var(--space-md)',
-                  border: '4px solid var(--color-accent)',
-                  background: '#e9ecef'
-                }}
-              />
-            </div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-extrabold" style={{ fontFamily: "Montserrat,Arial,sans-serif" }}>
-                CFAFS Membership
-              </h1>
-              <p className="mt-6 mb-8 text-xl text-[#495464]" style={{ fontFamily: "Lato, Arial, sans-serif" }}>
-                The Cooperative Finance Association (CFA) is the nation's leading cooperatively owned provider of crop input finance products in the country. CFA has provided reliable financial products and services to the agricultural industry since 1943. Working exclusively with agricultural cooperatives for over 80 years gives us a superior understanding of the operational issues and financing requirements of your customers. Learn more about what CFA can provide your cooperative.              </p>
-              <div className="hero-buttons">
-                <Link href="/contact" className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>
-                  Learn More
-                </Link>
-              </div>
+          <div>
+            <h1 className="text-4xl md:text-5xl font-extrabold" style={{ fontFamily: "Montserrat,Arial,sans-serif" }}>
+              CFAFS Membership
+            </h1>
+            <p className="mt-6 mb-8 text-xl text-[#495464]" style={{ fontFamily: "Lato, Arial, sans-serif" }}>
+              The Cooperative Finance Association (CFA) is the nation's leading cooperatively owned provider of crop input finance products in the country. CFA has provided reliable financial products and services to the agricultural industry since 1943. Working exclusively with agricultural cooperatives for over 80 years gives us a superior understanding of the operational issues and financing requirements of your customers. Learn more about what CFA can provide your cooperative.              </p>
+            <div className="hero-buttons">
+              <Link href="/contact" className="btn btn-primary" style={{ textAlign: 'center' }}>
+                Learn More
+              </Link>
             </div>
           </div>
         </div>

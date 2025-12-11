@@ -12,13 +12,13 @@ export default function CareersPage() {
       <section className="hero">
         <div className="container">
           <h1>Join Our Team</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Help us empower agricultural communities nationwide.</p>
+          <p>The Cooperative Finance Association (CFA) is a member-owned cooperative that provides innovative financial solutions to agricultural cooperatives and agribusinesses. We leverage cutting-edge financial technology and data-driven insights to support the success of our members and stakeholders. Our commitment to technology-driven solutions ensures that we stay at the forefront of financial services innovation while maintaining strong cooperative values.</p>
         </div>
       </section>
       <section className="section">
         <div className="container-narrow">
-          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-6)' }}>Open Positions</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-md)' }}>Open Positions</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-sm)' }}>
             {jobs.map((job) => (
               <div key={job.title} className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 'var(--space-3)' }}>
                 <div>
@@ -31,11 +31,11 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-      <section className="section" style={{ background: 'var(--color-bg-alt)', textAlign: 'center' }}>
+      <section className="section bg-[#F7F7F2]" style={{ textAlign: 'center' }}>
         <div className="container-narrow">
           <h2>Why Work With Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Competitive benefits, meaningful work, and a supportive team culture.</p>
-          <Link href="/contact" className="btn btn-outline">Learn More</Link>
+          <p>CFA offers a package of compensation and benefits programs that support our efforts to attract, reward and retain qualified individuals. This package includes financial security (base pay + incentive pay structure, 401k matching contributions and retirement plan), paid time off, health benefits, community involvement, health & wellness and professional development</p>
+          <Link href="/contact" className="btn btn-primary">Learn More</Link>
         </div>
       </section>
     </>

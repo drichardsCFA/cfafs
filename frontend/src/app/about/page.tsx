@@ -42,7 +42,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & History Cards */}
-      <section className="section bg-[#F7F7F2]">
+      <section className="section" style={{ background: 'var(--neutral-50)'}}>
         <div className="container">
           <div className="grid grid-2">
             <div className="card" style={{ margin: 'var(--space-md)' }}>
@@ -66,8 +66,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Journey Timeline */}
+      {/* Journey Timeline
       <section className="section" style={{ background: 'var(--neutral-50)' }}>
         <div className="container">
           <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-3xl)' }}>Our Journey</h2>
@@ -100,6 +99,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      /*}
 
       {/* CTA Section */}
       <section className="section bg-[#F7F7F2]">

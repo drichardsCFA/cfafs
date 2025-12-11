@@ -10,31 +10,14 @@ export default function SocIIPage() {
     <main className="bg-[#F7F7F2] min-h-screen">
       <section className="hero section">
         <div className="container">
-          <div className="grid grid-cols-2 w-full gap-6 content-left">
-            <div className="content-left">
-              <img
-                src="images/fieldoffice.jpg"
-                alt="About Us Marketing Photo"
-                style={{
-                  width: 600,
-                  height: 600,
-                  objectFit: 'cover',
-                  borderRadius: '50%',
-                  margin: '0 auto var(--space-md)',
-                  border: '4px solid var(--color-accent)',
-                  background: '#e9ecef'
-                }}
-              />
-            </div>
-            <div>
-              <h1>Security and Certifications</h1>
-              <p>
-                "This accomplishment is a direct result of our team's hard work and shared vision. SOC 2 Type 2 compliance is not just about meeting a standard, it's about demonstrating our ongoing commitment to protecting our clients' data and ensuring operational integrity. This achievement reinforces our position as a trusted partner in agricultural financing."
-              </p>
-              <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
-                Jordan Nussbaum - Chief Security Officer
-              </p>
-            </div>
+          <div>
+            <h1>Security and Certifications</h1>
+            <p>
+              "This accomplishment is a direct result of our team's hard work and shared vision. SOC 2 Type 2 compliance is not just about meeting a standard, it's about demonstrating our ongoing commitment to protecting our clients' data and ensuring operational integrity. This achievement reinforces our position as a trusted partner in agricultural financing."
+            </p>
+            <p style={{ color: 'var(--color-secondary)', fontWeight: 600, marginBottom: 'var(--space-sm)', marginTop: '10px' }}>
+              Jordan Nussbaum - Chief Security Officer
+            </p>
           </div>
         </div>
       </section>

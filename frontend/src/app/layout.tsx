@@ -64,7 +64,7 @@ export default function RootLayout({
               <div className="nav-logo">
                 <Link href="/" aria-label="Home">
                   <div className="nav-logo-bg">
-                    <img src="/images/CFA-01.png" alt="CFA Logo" style={{ height: 40 }} />
+                    <img src="/images/green_badge.png" alt="CFA Logo" style={{ height: 80 }} />
                   </div>
                 </Link>
               </div>
