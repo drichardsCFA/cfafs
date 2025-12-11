@@ -10,26 +10,26 @@ export default function MembershipPage() {
         {
       title: "Products and Services",
       description: "Members have full access to CFA’s wide range of financial products and services, including commercial agribusiness loans and input finance loans. Additionally, our member cooperatives can offer dedicated financing options to their customers.",
-      icon: "/images/check.svg",
-      alt: "Convenience Icon"
+      icon: "/images/cog.svg",
+      alt: "Products and Services Icon"
     },
     {
       title: "Patronage",
       description: "CFA conducts the majority of its business on a patronage basis. A substantial portion of our annual earnings are returned to our members as a patronage refund. The patronage refund consists of both cash and Class B Common Stock.",
-      icon: "/images/benefit-icon3.svg",
+      icon: "/images/money.svg",
       alt: "Expert Support Icon"      
     },
     {
       title: "Customer Service",
       description: "We provide your team with loan lifecycle support and training. Despite utilizing an all-electronic delivery model, CFA recognizes and adapts to its unique and traditional membership by communicating with members however they prefer.",
-      icon: "/images/globe.svg",
-      alt: "Comprehensive Icon"
+      icon: "/images/benefit-icon3.svg",
+      alt: "Customer Service Icon"
     },
     {
       title: "Technological Innovation",
       description: "We put security and improving our product offerings as a top priority. By constantly reassessing our offerings and processes, we are able to reengineer our products and services to remain competitive in today's financial market. All of this is done with providing our memberss the highest quality offerings in a timely, convenient, and affordable manner.",
-      icon: "/images/money.svg",
-      alt: "Cost-Effective Icon"
+      icon: "/images/lightbulb.svg",
+      alt: "Technological Innovations Icon"
     },
   ]
   return (
@@ -111,7 +111,21 @@ export default function MembershipPage() {
               Membership Benefits
             </h2>
           </div>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 gap-4">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="card">
+                <img
+                  src={benefit.icon}
+                  alt={benefit.alt}
+                  className="mb-4"
+                  style={{ width: 54, height: 54, objectFit: 'contain', background: "#e5f6f5", borderRadius: 12 }}
+                />
+                <h3>{benefit.title}</h3>
+                <p style={{ marginBottom: 'var(--space-md)' }}>{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+          {/*
             <div style={{ textAlign: 'center' }}>
               <h3>
                 Products and Services
@@ -141,7 +155,8 @@ export default function MembershipPage() {
               </p>
             </div>
           </div>
-          <div style={{ textAlign: 'center' }}>
+          */}
+          <div style={{ textAlign: 'center', marginTop: 'var(--space-md)' }}>
             <Link href="/contact" className="btn btn-primary" style={{ textAlign: 'center' }}>
               Become a Member
             </Link>
