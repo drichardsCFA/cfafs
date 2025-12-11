@@ -80,6 +80,7 @@ export default function RootLayout({
                   <DropdownMenu label="Products" href="/products">
                     <li><Link href="/loans">Loan Products</Link></li>
                     <li><Link href="/field-finance">Field Finance</Link></li>
+                    <li><Link href="/rates">Interest Rates</Link></li>
                     <li><Link href="/field-finance#demo">Request a Demo</Link></li>
                     <li><Link href="/field-finance#support">Support</Link></li>
                   </DropdownMenu>

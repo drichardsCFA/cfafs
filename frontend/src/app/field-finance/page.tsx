@@ -1,6 +1,47 @@
+import { secondsInDay } from "date-fns/constants";
 import Link from "next/link";
 
 export default function FieldFinancePage() {
+
+  const features = [
+        {
+      title: "Convenient",
+      description: "Easy to apply. Fast approval process. Simple loan documentation.",
+      icon: "/images/check.svg",
+      alt: "Convenience Icon"
+    },
+    {
+      title: "Expert Support",
+      description: "CFA provides ongoing marketing support and training to your staff.",
+      icon: "/images/benefit-icon3.svg",
+      alt: "Expert Support Icon"      
+    },
+    {
+      title: "Comprehensive",
+      description: "Finance all agricultural production needs under one loan with CFA.",
+      icon: "/images/globe.svg",
+      alt: "Comprehensive Icon"
+    },
+    {
+      title: "Cost-Effective",
+      description: "All of the advantages of a captive financing company without the cost of operation or capitalization.",
+      icon: "/images/money.svg",
+      alt: "Cost-Effective Icon"
+    },
+    {
+      title: "Competitive Advantage",
+      description: "Make your offering very desirable to the customer with easily customizable loan programs and interest subsidy matching.",
+      icon: "/images/chart.svg",
+      alt: "Competitive Advantage Icon"
+    },
+    {
+      title: "Flexible",
+      description: "Competitive interest rate options and loan maturities to match your marketing needs.",
+      icon: "/images/arrows.svg",
+      alt: "Flexibility Icon"
+    },
+  ]
+
   return (
     <>
       <section className="section hero">
@@ -21,8 +62,23 @@ export default function FieldFinancePage() {
           <Link href="/contact" className="btn btn-primary">Schedule Demo</Link>
         </div>
       </section>
-      <section className="section bg-[#F7F7F2]" style={{ background: 'var(--color-bg-alt)', textAlign: 'center' }}>
+      <section className="section" style={{ background: 'var(--color-bg-alt)', textAlign: 'center' }}>
         <div className="container">
+            <div className="grid grid-cols-2 gap-4">
+            {features.map((feature) => (
+              <div key={feature.title} className="card">
+                <img
+                  src={feature.icon}
+                  alt={feature.alt}
+                  className="mb-4"
+                  style={{ width: 54, height: 54, objectFit: 'contain', background: "#e5f6f5", borderRadius: 12 }}
+                />
+                <h3>{feature.title}</h3>
+                <p style={{ marginBottom: 'var(--space-md)' }}>{feature.description}</p>
+              </div>
+            ))}
+          </div>
+          {/*
           <div style={{ textAlign: 'center' }}>
             <h2 className="text-2xl font-bold mb-8 text-[#4F7942]" style={{fontFamily:"Montserrat,Arial,sans-serif"}}>
               Features and Benefits
@@ -72,6 +128,7 @@ export default function FieldFinancePage() {
               </p>
             </div>
           </div>
+          */}
         </div>
       </section>
       <section id="support" className="section bg-[#F7F7F2]">

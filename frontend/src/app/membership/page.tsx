@@ -6,6 +6,32 @@ export const metadata = {
     "Learn how to join CFAFS, access exclusive finance solutions, and strengthen your agribusiness with the power of membership.",
 };
 export default function MembershipPage() {
+    const benefits = [
+        {
+      title: "Products and Services",
+      description: "Members have full access to CFA’s wide range of financial products and services, including commercial agribusiness loans and input finance loans. Additionally, our member cooperatives can offer dedicated financing options to their customers.",
+      icon: "/images/check.svg",
+      alt: "Convenience Icon"
+    },
+    {
+      title: "Patronage",
+      description: "CFA conducts the majority of its business on a patronage basis. A substantial portion of our annual earnings are returned to our members as a patronage refund. The patronage refund consists of both cash and Class B Common Stock.",
+      icon: "/images/benefit-icon3.svg",
+      alt: "Expert Support Icon"      
+    },
+    {
+      title: "Customer Service",
+      description: "We provide your team with loan lifecycle support and training. Despite utilizing an all-electronic delivery model, CFA recognizes and adapts to its unique and traditional membership by communicating with members however they prefer.",
+      icon: "/images/globe.svg",
+      alt: "Comprehensive Icon"
+    },
+    {
+      title: "Technological Innovation",
+      description: "We put security and improving our product offerings as a top priority. By constantly reassessing our offerings and processes, we are able to reengineer our products and services to remain competitive in today's financial market. All of this is done with providing our memberss the highest quality offerings in a timely, convenient, and affordable manner.",
+      icon: "/images/money.svg",
+      alt: "Cost-Effective Icon"
+    },
+  ]
   return (
     <main className="min-h-screen">
       <section className="section mx-auto text-center py-10 px-4 hero">
@@ -44,7 +70,7 @@ export default function MembershipPage() {
                   {["Exclusive Rates", "Trusted Guidance", "Community Support"][n - 1]}
                 </h2>
                 <p className="leading-relaxed text-[#495464]" style={{ fontFamily: "Lato,Arial,sans-serif" }}>
-                  {["***CFA provides the best possible market rates through our many strategic business partnerships. CFA stays on the cutting edge of the market using technical insights and market agility.", "***With over 80 years in the industry and 50 years partnering with CoBank, CFA can provide the stability and trust you are looking for in a lending partner. Our commmitment to financial success, security, and customer service is unmatched in the industry.", "***CFA delivers tailored financing options designed to empower rural communities and advance cooperative principles. Our cooperative exists to serve the needs of agricultural producers and the cooperatives that are the beneficial owners of CFA. We strive to make a positive impact within our member’s communities, strengthening rural America."][n-1]}
+                  {["CFA provides the best possible market rates through our many strategic business partnerships. CFA stays on the cutting edge of the market using technical insights and market agility.", "With over 80 years in the industry and 50 years partnering with CoBank, CFA can provide the stability and trust you are looking for in a lending partner. Our commmitment to financial success, security, and customer service is unmatched in the industry.", "CFA delivers tailored financing options designed to empower rural communities and advance cooperative principles. Our cooperative exists to serve the needs of agricultural producers and the cooperatives that are the beneficial owners of CFA. We strive to make a positive impact within our member’s communities, strengthening rural America."][n-1]}
                 </p>
               </div>
             ))}

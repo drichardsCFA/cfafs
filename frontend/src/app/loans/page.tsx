@@ -54,10 +54,10 @@ export default function LoansPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-[#F7F7F2]">
         <div className="container">
           <h2 style={{ textAlign: 'center', marginBottom: 'var(--space-lg)' }}>Our Loan Products</h2>
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 gap-4">
             {products.map((product) => (
               <div key={product.title} className="card">
                 <img
@@ -71,7 +71,7 @@ export default function LoansPage() {
                 <h4 style={{ fontSize: '1rem', marginBottom: 'var(--space-xs)' }}>Key Features:</h4>
                 <ul style={{ listStyle: 'none', padding: 0, marginBottom: 'var(--space-med)' }}>
                   {product.features.map((feature) => (
-                    <li key={feature} style={{ marginBottom: 'var(--space-1)', paddingLeft: '1.5rem', position: 'relative' }}>
+                    <li key={feature} style={{ marginBottom: 'var(--space-xs)', paddingLeft: '1.5rem', position: 'relative' }}>
                       <span style={{ position: 'absolute', left: 0, color: 'var(--color-accent)' }}>✓</span>
                       {feature}
                     </li>
@@ -80,23 +80,9 @@ export default function LoansPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="section bg-[#F7F7F2]">
-        <div className="container-narrow" style={{ textAlign: 'center' }}>
-          <h2>Competitive Interest Rates</h2>
-          <p style={{ fontSize: '1.125rem', marginBottom: 'var(--space-md)' }}>
-            ***CFA offers a comprehensive array of financial products and services that are carefully engineered to fulfill customer needs and satisfy the overall demands of the marketplace. In this regard, particular emphasis is accorded to delivering the types of products and services that exceed expectations and out-perform competitive offerings.
-          </p>
-          <h3>Current Rates</h3>
-          <p>Simpli-Fi by CFA Field Finance Rate:  8.00% Variable</p>
-          <p>Interest Rate for CFA Input Finance Loans Booked for the 2024, 2025and 2026 Crop Years. </p>
-
-          <p>CFA Input Advantage Rate:  10.00% Variable</p>
-          <p>Interest Rate for CFA Input Finance Loans Booked Prior to the 2024 Crop Year.</p>
-          <p>CFA Base Rate for Commercial Loans:   7.75% Variable</p>
-          <Link href="/contact" className="btn btn-primary">Request a Quote</Link>
+          <div style={{textAlign: 'center', marginTop: 'var(--space-md)' }}>
+            <Link href="/contact" className="btn btn-primary">Request a Quote</Link>
+          </div>
         </div>
       </section>
     </>
