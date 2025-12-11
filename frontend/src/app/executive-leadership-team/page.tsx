@@ -53,7 +53,7 @@ const executives = [
     photo: "/images/elt/keith_becker.jpg",
   },
   {
-    name: "Stephen Hoeffer",
+    name: "Stephen Hoefer",
     title: "Sr. Vice President",
     shortBio: "Chief Financial Officer",
     fullBio: [
@@ -62,7 +62,7 @@ const executives = [
       "Prior to CFA, Stephen spent six years as a Fund Controller at Platform Ventures, where he oversaw accounting, reporting, and operational processes for private equity real estate funds investing in real estate and related assets.",
       "Stephen holds a Master of Science in Accounting from Boston College’s Carroll School of Management and a Bachelor of Science in Business Administration with an emphasis in Accounting from Rockhurst University’s Helzberg School of Management. He brings a strong analytical approach, a commitment to operational clarity, and a focus on advancing CFA’s mission of providing dependable financial solutions to agricultural cooperatives nationwide.",
     ],
-    photo: "/images/stephen_hoeffer.png",
+    photo: "/images/stephen_hoefer.png",
   },
   {
     name: "Joe Funk",
