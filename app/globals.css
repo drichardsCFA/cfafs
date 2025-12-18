@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-slide-grid {
+    animation: slideGrid 30s linear infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 6s ease-in-out infinite;
+  }
+
+  @keyframes slideGrid {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(80px, 80px);
+    }
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.4;
+    }
+  }
+}
